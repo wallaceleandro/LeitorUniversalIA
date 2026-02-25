@@ -20,12 +20,23 @@ class MainActivity : AppCompatActivity() {
 
             val textoDigitado = editTexto.text.toString()
 
-            if (textoDigitado.isNotEmpty()) {
-                textResultado.text = textoDigitado
-            } else {
+            if (textoDigitado.isEmpty()) {
                 textResultado.text = "Digite algo primeiro."
+                return@setOnClickListener
             }
 
+            val resposta = when {
+                textoDigitado.length > 100 ->
+                    "Resumo: ${textoDigitado.take(100)}..."
+
+                textoDigitado.trim().endsWith("?") ->
+                    "Pergunta detectada. Em breve a IA responderá isso corretamente."
+
+                else ->
+                    "Texto processado com sucesso:\n\n$textoDigitado"
+            }
+
+            textResultado.text = resposta
         }
     }
 }
