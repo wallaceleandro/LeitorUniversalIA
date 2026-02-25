@@ -1,0 +1,55 @@
+# ==========================
+# Gradle & Kotlin
+# ==========================
+.gradle/
+build/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+*.kts.lock
+*.lock
+.gradle.properties
+
+# ==========================
+# Android Studio
+# ==========================
+.idea/
+*.iml
+*.hprof
+captures/
+.externalNativeBuild/
+.cxx/
+
+# ==========================
+# Local configuration
+# ==========================
+local.properties
+*.keystore
+
+# ==========================
+# OS-specific files
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Log files
+# ==========================
+*.log
+
+# ==========================
+# Generated resources & outputs
+# ==========================
+*.apk
+*.ap_
+*.dex
+*.class
+*.so
+*.jar
+*.war
+*.ear
+
+# ==========================
+# Misc
+# ==========================
+*.orig
+*.rej
