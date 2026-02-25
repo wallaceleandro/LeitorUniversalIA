@@ -1,4 +1,5 @@
-xmlns:android="http://schemas.android.com/apk/res/android"<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -7,12 +8,11 @@ xmlns:android="http://schemas.android.com/apk/res/android"<?xml version="1.0" en
     android:padding="24dp">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Leitor Universal IA"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="24dp" />
+        android:textSize="22sp"
+        android:layout_marginBottom="16dp"/>
 
     <EditText
         android:id="@+id/editTexto"
@@ -29,12 +29,12 @@ xmlns:android="http://schemas.android.com/apk/res/android"<?xml version="1.0" en
         android:text="Processar Texto"
         android:layout_marginTop="24dp"/>
 
-<TextView
-    android:id="@+id/textResultado"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="24dp"
-    android:textSize="18sp"
-    android:textColor="#000000"/>
+    <TextView
+        android:id="@+id/textResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="18sp"
+        android:textColor="#000000"/>
 
 </LinearLayout>
