@@ -3,7 +3,7 @@ package com.leitoruniversalia
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -14,15 +14,18 @@ class MainActivity : AppCompatActivity() {
 
         val editTexto = findViewById<EditText>(R.id.editTexto)
         val buttonProcessar = findViewById<Button>(R.id.buttonProcessar)
+        val textResultado = findViewById<TextView>(R.id.textResultado)
 
         buttonProcessar.setOnClickListener {
+
             val textoDigitado = editTexto.text.toString()
 
             if (textoDigitado.isNotEmpty()) {
-                Toast.makeText(this, textoDigitado, Toast.LENGTH_LONG).show()
+                textResultado.text = textoDigitado
             } else {
-                Toast.makeText(this, "Digite algum texto primeiro", Toast.LENGTH_SHORT).show()
+                textResultado.text = "Digite algo primeiro."
             }
+
         }
     }
 }
