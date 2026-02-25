@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         val textResultado = findViewById<TextView>(R.id.textResultado)
 
         buttonProcessar.setOnClickListener {
-
             val textoDigitado = editTexto.text.toString()
 
             if (textoDigitado.isEmpty()) {
@@ -28,10 +27,8 @@ class MainActivity : AppCompatActivity() {
             val resposta = when {
                 textoDigitado.length > 100 ->
                     "Resumo: ${textoDigitado.take(100)}..."
-
                 textoDigitado.trim().endsWith("?") ->
                     "Pergunta detectada. Em breve a IA responderá isso corretamente."
-
                 else ->
                     "Texto processado com sucesso:\n\n$textoDigitado"
             }
