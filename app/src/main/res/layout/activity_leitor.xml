@@ -16,9 +16,9 @@
         android:inputType="textMultiLine" />
 
     <Button
-        android:id="@+id/btnLer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ler Texto" />
+    android:id="@+id/btnReadText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Ler Texto" />
 
 </LinearLayout>
