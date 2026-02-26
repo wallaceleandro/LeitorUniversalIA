@@ -12,69 +12,66 @@ class LeitorActivity : Activity(), TextToSpeech.OnInitListener {
 
     private lateinit var editText: EditText
     private lateinit var btnReadText: Button
-    private lateinit var btnAudio: Button
+    private lateinit var btnAddAudio: Button
     private lateinit var btnCopy: Button
     private lateinit var btnSave: Button
 
-    private lateinit var tts: TextToSpeech
+    private var tts: TextToSpeech? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leitor)
 
-        // Inicializa o TTS
-        tts = TextToSpeech(this, this)
-
-        // Vincula os botões e o EditText
+        // Referências do layout
         editText = findViewById(R.id.editText)
         btnReadText = findViewById(R.id.btnReadText)
-        btnAudio = findViewById(R.id.btnAudio)
+        btnAddAudio = findViewById(R.id.btnRecord) // pode mudar para AddAudio futuramente
         btnCopy = findViewById(R.id.btnCopy)
         btnSave = findViewById(R.id.btnSave)
+
+        // Inicializa TextToSpeech
+        tts = TextToSpeech(this, this)
 
         // Botão Ler Texto
         btnReadText.setOnClickListener {
             val text = editText.text.toString()
             if (text.isNotEmpty()) {
-                tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "tts1")
+                tts?.speak(text, TextToSpeech.QUEUE_FLUSH, null, "tts1")
             } else {
-                Toast.makeText(this, "Digite algum texto", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Digite ou cole algum texto!", Toast.LENGTH_SHORT).show()
             }
         }
 
-        // Botão Usar Áudio (selecionar ou adicionar)
-        btnAudio.setOnClickListener {
-            Toast.makeText(this, "Funcionalidade de usar áudio em desenvolvimento", Toast.LENGTH_SHORT).show()
+        // Botão Adicionar Áudio (placeholder)
+        btnAddAudio.setOnClickListener {
+            Toast.makeText(this, "Função de adicionar áudio ainda não implementada.", Toast.LENGTH_SHORT).show()
         }
 
-        // Botão Copiar
+        // Botão Copiar texto
         btnCopy.setOnClickListener {
             val clipboard = getSystemService(CLIPBOARD_SERVICE) as android.content.ClipboardManager
-            val clip = android.content.ClipData.newPlainText("text", editText.text.toString())
+            val clip = android.content.ClipData.newPlainText("texto", editText.text.toString())
             clipboard.setPrimaryClip(clip)
-            Toast.makeText(this, "Texto copiado", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Texto copiado para área de transferência.", Toast.LENGTH_SHORT).show()
         }
 
-        // Botão Salvar
+        // Botão Salvar texto (placeholder)
         btnSave.setOnClickListener {
-            Toast.makeText(this, "Funcionalidade de salvar em desenvolvimento", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Função de salvar texto ainda não implementada.", Toast.LENGTH_SHORT).show()
         }
     }
 
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
-            val result = tts.setLanguage(Locale("pt", "BR"))
-            if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
-                Toast.makeText(this, "Idioma não suportado", Toast.LENGTH_SHORT).show()
-            }
+            tts?.language = Locale("pt", "BR") // Português do Brasil
         } else {
-            Toast.makeText(this, "Falha ao inicializar TTS", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Falha ao inicializar TextToSpeech.", Toast.LENGTH_SHORT).show()
         }
     }
 
     override fun onDestroy() {
-        tts.stop()
-        tts.shutdown()
+        tts?.stop()
+        tts?.shutdown()
         super.onDestroy()
     }
 }
