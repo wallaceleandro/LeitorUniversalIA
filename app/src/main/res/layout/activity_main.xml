@@ -1,106 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
 
+    <!-- Campo de texto -->
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:hint="Digite ou cole o texto aqui"
+        android:background="@drawable/edittext_border"
+        android:padding="12dp"
+        android:gravity="top"
+        android:textSize="16sp"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical" />
+
+    <!-- Botões em linha -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp">
-
-        <!-- Título -->
-        <TextView
-            android:id="@+id/textTitulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Leitor Universal IA"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:paddingBottom="16dp"/>
-
-        <!-- Campo de texto -->
-        <EditText
-            android:id="@+id/editTexto"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:hint="Digite seu texto aqui"
-            android:gravity="top"
-            android:inputType="textMultiLine"
-            android:background="@drawable/edittext_border"
-            android:padding="12dp"/>
-
-        <!-- Botão processar texto -->
-        <Button
-            android:id="@+id/buttonProcessar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Processar Texto"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="#6200EE"
-            android:textColor="#FFFFFF"/>
-
-        <!-- Resultado do processamento -->
-        <TextView
-            android:id="@+id/textResultado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textSize="18sp"
-            android:textColor="#000000"
-            android:padding="8dp"/>
-
-        <!-- Espaço para próximos botões (futuros) -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#CCCCCC"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="16dp"/>
-
-        <!-- Botões de funcionalidades futuras -->
-        <Button
-            android:id="@+id/buttonLeitor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Leitor de Texto"
-            android:layout_marginTop="8dp"/>
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:weightSum="4">
 
         <Button
-            android:id="@+id/buttonCNH"
-            android:layout_width="match_parent"
+            android:id="@+id/btnReadText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="CNH"
-            android:layout_marginTop="8dp"/>
+            android:text="Ler Texto" />
 
         <Button
-            android:id="@+id/buttonConversao"
-            android:layout_width="match_parent"
+            android:id="@+id/btnRecord"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Conversão Texto ↔ Áudio"
-            android:layout_marginTop="8dp"/>
+            android:text="Gravar Áudio"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp" />
 
         <Button
-            android:id="@+id/buttonTemas"
-            android:layout_width="match_parent"
+            android:id="@+id/btnCopy"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Temas Mundiais"
-            android:layout_marginTop="8dp"/>
+            android:text="Copiar" />
 
         <Button
-            android:id="@+id/buttonExtra1"
-            android:layout_width="match_parent"
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Função Extra 1"
-            android:layout_marginTop="8dp"/>
+            android:text="Salvar" />
 
-        <Button
-            android:id="@+id/buttonExtra2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Função Extra 2"
-            android:layout_marginTop="8dp"/>
     </LinearLayout>
-</ScrollView>
+
+</LinearLayout>

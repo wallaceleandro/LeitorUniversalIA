@@ -1,71 +1,124 @@
 package com.leitoruniversalia
 
+import android.app.Activity
+import android.content.ActivityNotFoundException
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import android.widget.*
+import android.speech.RecognizerIntent
+import android.speech.tts.TextToSpeech
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var editTexto: EditText
-    private lateinit var buttonProcessar: Button
-    private lateinit var textResultado: TextView
+    private lateinit var editText: EditText
+    private lateinit var btnReadText: Button
+    private lateinit var btnRecord: Button
+    private lateinit var btnCopy: Button
+    private lateinit var btnSave: Button
+    private lateinit var tts: TextToSpeech
 
-    private lateinit var buttonLeitor: Button
-    private lateinit var buttonCNH: Button
-    private lateinit var buttonConversao: Button
-    private lateinit var buttonTemas: Button
-    private lateinit var buttonExtra1: Button
-    private lateinit var buttonExtra2: Button
+    private val SPEECH_CODE = 100
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Inicializar campos
-        editTexto = findViewById(R.id.editTexto)
-        buttonProcessar = findViewById(R.id.buttonProcessar)
-        textResultado = findViewById(R.id.textResultado)
+        // Conectar elementos do XML
+        editText = findViewById(R.id.editText)
+        btnReadText = findViewById(R.id.btnReadText)
+        btnRecord = findViewById(R.id.btnRecord)
+        btnCopy = findViewById(R.id.btnCopy)
+        btnSave = findViewById(R.id.btnSave)
 
-        buttonLeitor = findViewById(R.id.buttonLeitor)
-        buttonCNH = findViewById(R.id.buttonCNH)
-        buttonConversao = findViewById(R.id.buttonConversao)
-        buttonTemas = findViewById(R.id.buttonTemas)
-        buttonExtra1 = findViewById(R.id.buttonExtra1)
-        buttonExtra2 = findViewById(R.id.buttonExtra2)
-
-        // Listener do botão principal
-        buttonProcessar.setOnClickListener {
-            val textoDigitado = editTexto.text.toString().trim()
-            if (textoDigitado.isEmpty()) {
-                textResultado.text = "Digite algo primeiro."
-            } else {
-                textResultado.text = "Texto processado com sucesso:\n\n$textoDigitado"
+        // Inicializar Text-to-Speech
+        tts = TextToSpeech(this) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                tts.language = Locale("pt", "BR")
             }
         }
 
-        // Listeners dos futuros botões (ainda sem funções)
-        buttonLeitor.setOnClickListener {
-            Toast.makeText(this, "Leitor de Texto (a implementar)", Toast.LENGTH_SHORT).show()
+        // BOTÃO LER TEXTO
+        btnReadText.setOnClickListener {
+            val texto = editText.text.toString()
+
+            if (texto.isNotEmpty()) {
+                tts.speak(texto, TextToSpeech.QUEUE_FLUSH, null, null)
+            } else {
+                Toast.makeText(this, "Digite algum texto primeiro", Toast.LENGTH_SHORT).show()
+            }
         }
 
-        buttonCNH.setOnClickListener {
-            Toast.makeText(this, "CNH (a implementar)", Toast.LENGTH_SHORT).show()
+        // BOTÃO GRAVAR ÁUDIO
+        btnRecord.setOnClickListener {
+
+            val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "pt-BR")
+
+            try {
+                startActivityForResult(intent, SPEECH_CODE)
+            } catch (e: ActivityNotFoundException) {
+                Toast.makeText(this,
+                    "Reconhecimento de voz não disponível",
+                    Toast.LENGTH_SHORT).show()
+            }
         }
 
-        buttonConversao.setOnClickListener {
-            Toast.makeText(this, "Conversão Texto ↔ Áudio (a implementar)", Toast.LENGTH_SHORT).show()
+        // BOTÃO COPIAR
+        btnCopy.setOnClickListener {
+
+            val clipboard = getSystemService(Context.CLIPBOARD_SERVICE)
+                    as ClipboardManager
+
+            val clip = ClipData.newPlainText("texto", editText.text.toString())
+            clipboard.setPrimaryClip(clip)
+
+            Toast.makeText(this, "Texto copiado", Toast.LENGTH_SHORT).show()
         }
 
-        buttonTemas.setOnClickListener {
-            Toast.makeText(this, "Temas Mundiais (a implementar)", Toast.LENGTH_SHORT).show()
-        }
+        // BOTÃO SALVAR
+        btnSave.setOnClickListener {
 
-        buttonExtra1.setOnClickListener {
-            Toast.makeText(this, "Função Extra 1 (a implementar)", Toast.LENGTH_SHORT).show()
-        }
+            val nomeArquivo = "texto_salvo.txt"
 
-        buttonExtra2.setOnClickListener {
-            Toast.makeText(this, "Função Extra 2 (a implementar)", Toast.LENGTH_SHORT).show()
+            openFileOutput(nomeArquivo, Context.MODE_PRIVATE).use {
+                it.write(editText.text.toString().toByteArray())
+            }
+
+            Toast.makeText(this,
+                "Texto salvo com sucesso",
+                Toast.LENGTH_SHORT).show()
         }
+    }
+
+    override fun onActivityResult(requestCode: Int,
+                                  resultCode: Int,
+                                  data: Intent?) {
+
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == SPEECH_CODE && resultCode == Activity.RESULT_OK) {
+
+            val resultado =
+                data?.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
+
+            if (!resultado.isNullOrEmpty()) {
+                editText.setText(resultado[0])
+            }
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        tts.stop()
+        tts.shutdown()
     }
 }
