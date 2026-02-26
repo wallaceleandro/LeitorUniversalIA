@@ -1,24 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Campo de texto -->
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:hint="Digite o texto aqui"
+        android:hint="Digite ou cole o texto aqui"
+        android:padding="12dp"
         android:gravity="top"
-        android:inputType="textMultiLine" />
+        android:textSize="16sp"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical" />
 
-    <Button
-    android:id="@+id/btnReadText"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Ler Texto" />
+    <!-- Botões do leitor -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/btnReadText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Ler Texto" />
+
+        <Button
+            android:id="@+id/btnAudio"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Usar Áudio"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btnCopy"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Copiar" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Salvar" />
+
+    </LinearLayout>
 
 </LinearLayout>
