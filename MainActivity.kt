@@ -1,60 +1,39 @@
-cat > app/src/main/java/com/leitoruniversalia/MainActivity.kt << 'EOF'
 package com.leitoruniversalia
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.LinearLayout
-import android.widget.ScrollView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : Activity() {
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var btnLeitorTexto: Button
+    private lateinit var btnCriacaoVideo: Button
+    private lateinit var btnConhecimentos: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-        // Layout programático (mais leve e flexível)
-        val scrollView = ScrollView(this)
-        val mainLayout = LinearLayout(this)
-        mainLayout.orientation = LinearLayout.VERTICAL
-        mainLayout.setPadding(16, 16, 16, 16)
-        scrollView.addView(mainLayout)
+        btnLeitorTexto = findViewById(R.id.btnLeitorTexto)
+        btnCriacaoVideo = findViewById(R.id.btnCriacaoVideo)
+        btnConhecimentos = findViewById(R.id.btnConhecimentos)
 
-        // Botão Leitor de Texto
-        val btnLeitor = Button(this)
-        btnLeitor.text = "Leitor de Texto"
-        btnLeitor.setOnClickListener {
+        btnLeitorTexto.setOnClickListener {
             val intent = Intent(this, LeitorActivity::class.java)
             startActivity(intent)
         }
-        mainLayout.addView(btnLeitor)
 
-        // Botão Criação de Vídeo (placeholder)
-        val btnVideo = Button(this)
-        btnVideo.text = "Criação de Vídeo IA"
-        btnVideo.setOnClickListener {
-            Toast.makeText(this, "Função Criação de Vídeo em desenvolvimento", Toast.LENGTH_SHORT).show()
+        btnCriacaoVideo.setOnClickListener {
+            // Futuro: abrir activity de criação de vídeo
+            val intent = Intent(this, CriacaoVideoActivity::class.java)
+            startActivity(intent)
         }
-        mainLayout.addView(btnVideo)
 
-        // Botão CNH (placeholder)
-        val btnCNH = Button(this)
-        btnCNH.text = "CNH - Conhecimentos"
-        btnCNH.setOnClickListener {
-            Toast.makeText(this, "Função CNH em desenvolvimento", Toast.LENGTH_SHORT).show()
-        }
-        mainLayout.addView(btnCNH)
-
-        // Botão Conhecimentos Gerais (placeholder)
-        val btnConhecimentos = Button(this)
-        btnConhecimentos.text = "Conhecimentos Gerais"
         btnConhecimentos.setOnClickListener {
-            Toast.makeText(this, "Função Conhecimentos em desenvolvimento", Toast.LENGTH_SHORT).show()
+            // Futuro: abrir activity de conhecimentos
+            val intent = Intent(this, ConhecimentosActivity::class.java)
+            startActivity(intent)
         }
-        mainLayout.addView(btnConhecimentos)
-
-        setContentView(scrollView)
     }
 }
-EOF

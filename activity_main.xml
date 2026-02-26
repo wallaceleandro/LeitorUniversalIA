@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@android:color/background_dark">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leitor Universal IA"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:id="@+id/btnLeitorTexto"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Leitor de Texto"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnCriacaoVideo"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Criação de Vídeo IA"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnConhecimentos"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Conhecimentos"
+        android:textSize="18sp"/>
+</LinearLayout>

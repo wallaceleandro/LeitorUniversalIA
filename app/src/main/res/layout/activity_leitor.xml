@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="#121212">
+    android:gravity="center"
+    android:padding="16dp">
 
-    <!-- Área de texto -->
+    <!-- Título -->
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leitor Universal IA"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Campo de texto -->
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:hint="Digite ou cole o texto aqui"
-        android:background="@android:color/darker_gray"
+        android:background="@drawable/edittext_border"
         android:padding="12dp"
         android:gravity="top"
-        android:textColor="#FFFFFF"
         android:textSize="16sp"
-        android:inputType="textMultiLine"
-        android:scrollbars="vertical"/>
+        android:scrollbars="vertical"
+        android:inputType="textMultiLine" />
 
     <!-- Botões -->
     <LinearLayout
@@ -28,36 +38,45 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_marginTop="12dp"
-        android:weightSum="4">
+        android:weightSum="5">
 
         <Button
             android:id="@+id/btnReadText"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Ler Texto"/>
+            android:text="Ler Texto" />
 
         <Button
-            android:id="@+id/btnRecord"
+            android:id="@+id/btnAudio"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Gravar Áudio"
+            android:text="Usar Áudio"
             android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"/>
+            android:layout_marginEnd="4dp" />
 
         <Button
             android:id="@+id/btnCopy"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Copiar"/>
+            android:text="Copiar" />
 
         <Button
             android:id="@+id/btnSave"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Salvar"/>
+            android:text="Salvar" />
+
+        <Button
+            android:id="@+id/btnImage"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Escolher Imagem" />
+
     </LinearLayout>
+
 </LinearLayout>
