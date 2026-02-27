@@ -10,19 +10,16 @@ import java.util.*
 class LeitorActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     private lateinit var tts: TextToSpeech
-    private lateinit var edtTexto: EditText
+    private lateinit var editText: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leitor)
 
-        edtTexto = findViewById(R.id.edtTexto)
+        editText = findViewById(R.id.editText)
 
         val btnReadText = findViewById<Button>(R.id.btnReadText)
         val btnAudio = findViewById<Button>(R.id.btnAudio)
-        val btnSave = findViewById<Button>(R.id.btnSave)
-        val btnCopy = findViewById<Button>(R.id.btnCopy)
-        val btnImage = findViewById<Button>(R.id.btnImage)
 
         tts = TextToSpeech(this, this)
 
@@ -36,7 +33,7 @@ class LeitorActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     }
 
     private fun falarTexto() {
-        val texto = edtTexto.text.toString()
+        val texto = editText.text.toString()
         if (texto.isNotEmpty()) {
             tts.speak(texto, TextToSpeech.QUEUE_FLUSH, null, null)
         }
