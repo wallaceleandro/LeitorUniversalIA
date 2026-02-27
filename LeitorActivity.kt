@@ -1,63 +1,45 @@
-	package com.leitoruniversalia
+package com.leitoruniversalia
 
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import com.leitoruniversalia.data.AppDatabase
-import com.leitoruniversalia.data.AudioText
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import java.util.*
 
 class LeitorActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     private lateinit var tts: TextToSpeech
     private lateinit var edtTexto: EditText
-    private lateinit var btnLer: Button
-    private lateinit var btnSalvar: Button
-
-    private val db by lazy { AppDatabase.getDatabase(this).audioTextDao() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leitor)
 
+        edtTexto = findViewById(R.id.edtTexto)
+
+        val btnReadText = findViewById<Button>(R.id.btnReadText)
+        val btnAudio = findViewById<Button>(R.id.btnAudio)
+        val btnSave = findViewById<Button>(R.id.btnSave)
+        val btnCopy = findViewById<Button>(R.id.btnCopy)
+        val btnImage = findViewById<Button>(R.id.btnImage)
+
         tts = TextToSpeech(this, this)
 
-        edtTexto = findViewById(R.id.edtTexto)
-        btnLer = findViewById(R.id.btnLer)
-        btnSalvar = findViewById(R.id.btnSalvar)
-
-        btnLer.setOnClickListener {
-            lerTexto(edtTexto.text.toString())
+        btnReadText.setOnClickListener {
+            val texto = edtTexto.text.toString()
+            tts.speak(texto, TextToSpeech.QUEUE_FLUSH, null, null)
         }
 
-        btnSalvar.setOnClickListener {
-            salvarTexto(edtTexto.text.toString())
-        }
-    }
-
-    private fun lerTexto(texto: String) {
-        if (texto.isNotEmpty()) {
-            // Voz humana natural (Android TTS, futura integração IA central)
-            tts.speak(texto, TextToSpeech.QUEUE_FLUSH, null, "tts1")
-        }
-    }
-
-    private fun salvarTexto(texto: String) {
-        if (texto.isNotEmpty()) {
-            CoroutineScope(Dispatchers.IO).launch {
-                db.insert(AudioText(title = "Texto salvo", content = texto))
-            }
+        btnAudio.setOnClickListener {
+            val texto = edtTexto.text.toString()
+            tts.speak(texto, TextToSpeech.QUEUE_FLUSH, null, null)
         }
     }
 
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
-            tts.language = Locale.getDefault()
+            tts.language = Locale("pt", "BR")
         }
     }
 
