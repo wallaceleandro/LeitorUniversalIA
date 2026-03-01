@@ -6,27 +6,19 @@
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edtTexto"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:hint="Digite ou cole o texto aqui"
-        android:padding="12dp"
         android:gravity="top"
-        android:textSize="16sp"
-        android:scrollbars="vertical"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical" />
 
     <Button
-        android:id="@+id/btnReadText"
+        android:id="@+id/btnLer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ler Texto" />
-
-    <Button
-        android:id="@+id/btnAudio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Reproduzir Áudio" />
 
 </LinearLayout>

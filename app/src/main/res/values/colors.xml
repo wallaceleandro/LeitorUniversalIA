@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Leitor Universal IA</string>
-    <string name="btn_ler">Ler</string>
-    <string name="btn_parar">Parar</string>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="white">#FFFFFF</color>
 </resources>
