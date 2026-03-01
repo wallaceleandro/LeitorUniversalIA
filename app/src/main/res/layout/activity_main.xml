@@ -50,4 +50,83 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Status IA: Offline"
-                    android:textColor
+                    android:textColor="#DDDDDD"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:useDefaultMargins="true">
+
+                <Button
+                    android:id="@+id/btnLeitor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Leitor"
+                    android:textColor="#FFFFFF"
+                    android:background="#33FFFFFF"/>
+
+                <Button
+                    android:id="@+id/btnAudio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Áudio ↔ Texto"
+                    android:textColor="#FFFFFF"
+                    android:background="#33FFFFFF"/>
+
+                <Button
+                    android:id="@+id/btnIA"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="IA Central"
+                    android:textColor="#FFFFFF"
+                    android:background="#33FFFFFF"/>
+
+                <Button
+                    android:id="@+id/btnDocs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Documentos"
+                    android:textColor="#FFFFFF"
+                    android:background="#33FFFFFF"/>
+
+                <Button
+                    android:id="@+id/btnVideo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Criar Vídeo"
+                    android:textColor="#FFFFFF"
+                    android:background="#33FFFFFF"/>
+
+                <Button
+                    android:id="@+id/btnTema"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Ambiente Visual"
+                    android:textColor="#FFFFFF"
+                    android:background="#33FFFFFF"/>
+
+                <Button
+                    android:id="@+id/btnConfig"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Configurações"
+                    android:textColor="#FFFFFF"
+                    android:background="#33FFFFFF"/>
+
+            </GridLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
