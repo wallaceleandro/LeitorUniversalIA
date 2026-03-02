@@ -13,49 +13,27 @@
         android:hint="Digite ou cole o texto aqui"
         android:gravity="top"
         android:inputType="textMultiLine"
-        android:scrollbars="vertical" />
+        android:minLines="6" />
 
     <TextView
         android:id="@+id/statusVoice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Status: Parado"
-        android:padding="8dp"/>
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp" />
 
-    <SeekBar
-        android:id="@+id/seekSpeed"
+    <Button
+        android:id="@+id/btnPlay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:max="200"/>
+        android:text="Reproduzir" />
 
-    <SeekBar
-        android:id="@+id/seekPitch"
+    <Button
+        android:id="@+id/btnStop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:max="200"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnPlay"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:text="Play"/>
-
-        <Button
-            android:id="@+id/btnPause"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:text="Pause"/>
-
-        <Button
-            android:id="@+id/btnStop"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:text="Stop"/>
-    </LinearLayout>
+        android:text="Parar"
+        android:layout_marginTop="8dp" />
 
 </LinearLayout>

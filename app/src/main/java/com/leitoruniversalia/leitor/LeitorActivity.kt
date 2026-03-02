@@ -14,6 +14,7 @@ class LeitorActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private lateinit var tts: TextToSpeech
     private lateinit var editText: EditText
     private lateinit var statusVoice: TextView
+    private var ttsReady = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,28 +29,49 @@ class LeitorActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         tts = TextToSpeech(this, this)
 
         btnPlay.setOnClickListener {
+            if (!ttsReady) {
+                statusVoice.text = "Aguardando inicialização..."
+                return@setOnClickListener
+            }
+
             val text = editText.text.toString()
-            if (text.isNotEmpty()) {
+
+            if (text.isNotBlank()) {
                 tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, null)
                 statusVoice.text = "Status: Falando..."
+            } else {
+                statusVoice.text = "Digite algum texto primeiro."
             }
         }
 
         btnStop.setOnClickListener {
-            tts.stop()
-            statusVoice.text = "Status: Parado"
+            if (ttsReady) {
+                tts.stop()
+                statusVoice.text = "Status: Parado"
+            }
         }
     }
 
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
-            tts.language = Locale("pt", "BR")
+            val result = tts.setLanguage(Locale("pt", "BR"))
+            if (result != TextToSpeech.LANG_MISSING_DATA &&
+                result != TextToSpeech.LANG_NOT_SUPPORTED) {
+                ttsReady = true
+                statusVoice.text = "Pronto para falar."
+            } else {
+                statusVoice.text = "Idioma não suportado."
+            }
+        } else {
+            statusVoice.text = "Erro ao iniciar voz."
         }
     }
 
     override fun onDestroy() {
-        tts.stop()
-        tts.shutdown()
+        if (::tts.isInitialized) {
+            tts.stop()
+            tts.shutdown()
+        }
         super.onDestroy()
     }
 }

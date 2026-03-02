@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest package="com.leitoruniversalia"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
-        android:label="Leitor Universal IA"
-        android:theme="@style/Theme.LeitorUniversalIA">
+        android:label="LeitorUniversalIA"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
 
         <activity
-            android:name=".leitor.LeitorActivity"
-            android:exported="false" />
+            android:name=".leitor.LeitorActivity" />
 
         <activity
             android:name=".MainActivity"
