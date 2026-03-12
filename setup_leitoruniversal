@@ -1,14 +1,14 @@
 #!/bin/bash
 echo "==============================================="
-echo "CONFIGURANDO PROJETO LEITORUNIVERSALIA"
+echo "CONFIGURANDO E CORRIGINDO PROJETO LeitorUniversalIA"
 echo "==============================================="
 
-# 1️⃣ Atualizar Gradle Wrapper
-echo "[1/6] Atualizando Gradle Wrapper para 7.6..."
-./gradlew wrapper --gradle-version 7.6 --distribution-type bin
+# 1️⃣ Atualizar Gradle Wrapper para 8.2.2
+echo "[1/8] Atualizando Gradle Wrapper para 8.2.2..."
+./gradlew wrapper --gradle-version 8.2.2 --distribution-type bin || true
 
-# 2️⃣ Atualizar build.gradle raiz
-echo "[2/6] Atualizando Android Gradle Plugin e Kotlin..."
+# 2️⃣ Atualizar build.gradle raiz para AGP 8.2.2 + Kotlin 1.9.10
+echo "[2/8] Atualizando build.gradle..."
 cat > build.gradle << 'EOF'
 buildscript {
     ext.kotlin_version = '1.9.10'
@@ -17,7 +17,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.4.2'
+        classpath 'com.android.tools.build:gradle:8.2.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -30,8 +30,21 @@ allprojects {
 }
 EOF
 
-# 3️⃣ Criar workflow GitHub Actions
-echo "[3/6] Criando workflow GitHub Actions..."
+# 3️⃣ Atualizar gradle.properties para compatibilidade
+echo "[3/8] Atualizando gradle.properties..."
+cat >> gradle.properties << 'EOF'
+android.suppressUnsupportedCompileSdk=34
+org.gradle.jvmargs=-Xmx2g -Dfile.encoding=UTF-8
+kotlin.code.style=official
+EOF
+
+# 4️⃣ Limpar cache e builds antigos
+echo "[4/8] Limpando cache do Gradle e builds antigos..."
+rm -rf ~/.gradle/caches/
+./gradlew clean || true
+
+# 5️⃣ Atualizar workflow GitHub Actions
+echo "[5/8] Criando workflow GitHub Actions..."
 mkdir -p .github/workflows
 cat > .github/workflows/android-build.yml << 'EOF'
 name: Build Android APKs
@@ -47,10 +60,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v3
         with:
           distribution: temurin
           java-version: 17
@@ -87,22 +100,28 @@ jobs:
           path: app/build/outputs/apk/release/app-release.apk
 EOF
 
-# 4️⃣ Limpar caches antigos
-echo "[4/6] Limpando cache do Gradle e builds antigos..."
-rm -rf ~/.gradle/caches/
-./gradlew clean || true
+# 6️⃣ Forçar coreLibraryDesugaring (Java 8+ compatível)
+echo "[6/8] Forçando coreLibraryDesugaring..."
+sed -i '/android {/a \
+    compileOptions { \
+        sourceCompatibility JavaVersion.VERSION_1_8 \
+        targetCompatibility JavaVersion.VERSION_1_8 \
+        coreLibraryDesugaringEnabled true \
+    }' app/build.gradle
 
-# 5️⃣ Commitar alterações
-echo "[5/6] Commitando alterações..."
+sed -i '/dependencies {/a \
+    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.3"' app/build.gradle
+
+# 7️⃣ Commitar alterações
+echo "[7/8] Commitando alterações..."
 git add .
-git commit -m "Correção completa: Gradle 7.6, AGP 7.4.2, Kotlin 1.9.10 e workflow atualizado"
+git commit -m "Correção total: AGP 8.2.2, Kotlin 1.9.10, desugaring, workflow Actions"
 
-# 6️⃣ Enviar para GitHub
-echo "[6/6] Enviando alterações para GitHub..."
+# 8️⃣ Push para GitHub
+echo "[8/8] Enviando alterações para GitHub..."
 git push origin main
 
 echo "==============================================="
-echo "CONFIGURAÇÃO CONCLUÍDA!"
-echo "Workflow do GitHub Actions criado e pronto."
-echo "APKs debug/release serão gerados automaticamente no Actions."
+echo "PROJETO CORRIGIDO E CONFIGURADO!"
+echo "GitHub Actions irá gerar APKs debug/release automaticamente."
 echo "==============================================="
