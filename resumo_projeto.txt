@@ -1,0 +1,1507 @@
+Projeto: /data/data/com.termux/files/home/LeitorUniversalIA
+Data: Thu Mar 12 17:45:10 -03 2026
+=========================================
+
+>> Estrutura de pastas e arquivos:
+total 66K
+drwx------. 6 u0_a603 u0_a603 3.4K Mar 12 15:15 LeitorUniversalIA
+drwx------. 4 u0_a603 u0_a603 3.4K Mar 12 14:32 app
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 14:31 build
+-rw-------. 1 u0_a603 u0_a603  357 Mar 12 17:22 build.gradle
+-rwx------. 1 u0_a603 u0_a603  942 Mar 12 17:17 configurar_gradle_termux.sh
+-rwx------. 1 u0_a603 u0_a603 1.3K Mar 12 15:01 corrigir_manifest_leitor.sh
+-rwx------. 1 u0_a603 u0_a603 2.0K Mar 12 17:44 descrever_projeto.sh
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 14:31 gradle
+-rw-------. 1 u0_a603 u0_a603  109 Mar 12 14:30 gradle.properties
+-rwxr-xr-x. 1 u0_a603 u0_a603 8.5K Mar 12 14:31 gradlew
+-rw-------. 1 u0_a603 u0_a603 2.9K Mar 12 14:31 gradlew.bat
+-rwx------. 1 u0_a603 u0_a603 5.3K Mar 12 15:14 instalar_leitor_universal_completo.sh
+-rw-------. 1 u0_a603 u0_a603  173 Mar 12 17:45 resumo_projeto.txt
+-rw-------. 1 u0_a603 u0_a603   54 Mar 12 14:30 settings.gradle
+total 11K
+drwx------. 5 u0_a603 u0_a603 3.4K Mar 12 14:32 build
+-rw-------. 1 u0_a603 u0_a603  766 Mar 12 14:30 build.gradle
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 14:30 src
+total 3.5K
+drwx------. 4 u0_a603 u0_a603 3.4K Mar 12 14:30 main
+total 11K
+-rw-------. 1 u0_a603 u0_a603  551 Mar 12 15:02 AndroidManifest.xml
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 14:30 java
+drwx------. 4 u0_a603 u0_a603 3.4K Mar 12 14:30 res
+-rw-------. 1 u0_a603 u0_a603 766 Mar 12 14:30 ./app/build.gradle
+total 11K
+drwx------.  3 u0_a603 u0_a603 3.4K Mar 12 14:32 generated
+drwx------. 29 u0_a603 u0_a603 3.4K Mar 12 15:05 intermediates
+drwx------.  3 u0_a603 u0_a603 3.4K Mar 12 14:32 outputs
+total 95K
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 14:32 aar_metadata_check
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:02 annotation_processor_list
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:05 app_metadata
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:02 assets
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 14:32 compatible_screen_manifest
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:02 compressed_assets
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 14:32 data_binding_layout_info_type_merge
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 14:32 data_binding_layout_info_type_package
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:05 dex
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:03 duplicate_classes_check
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:03 external_file_lib_dex_archives
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:03 global_synthetics_file_lib
+drwx------. 6 u0_a603 u0_a603 3.4K Mar 12 15:03 incremental
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 14:32 local_only_symbol_list
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 14:32 manifest_merge_blame_file
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:03 merged_jni_libs
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 14:32 merged_manifest
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:02 merged_manifests
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 14:32 merged_res
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 14:32 merged_res_blame_folder
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:02 merged_shaders
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 14:32 navigation_json
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:02 packaged_manifests
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 14:32 packaged_res
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:05 signing_config_versions
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 14:32 source_set_path_map
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:05 validate_signing_config
+total 3.5K
+drwx------. 4 u0_a603 u0_a603 3.4K Mar 12 14:32 res
+total 3.5K
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:02 logs
+-rw-------. 1 u0_a603 u0_a603 54 Mar 12 14:30 ./settings.gradle
+-rw-------. 1 u0_a603 u0_a603 357 Mar 12 17:22 ./build.gradle
+-rw-------. 1 u0_a603 u0_a603 109 Mar 12 14:30 ./gradle.properties
+total 14K
+drwx------. 8 u0_a603 u0_a603 3.4K Mar 12 14:31 9.4.0
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 14:31 buildOutputCleanup
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 14:31 kotlin
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 14:31 vcs-1
+total 21K
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 14:32 checksums
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 14:31 executionHistory
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 14:31 expanded
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 14:31 fileChanges
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 14:32 fileHashes
+-rw-------. 1 u0_a603 u0_a603    0 Mar 12 14:31 gc.properties
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 14:31 vcsMetadata
+total 56K
+-rw-------. 1 u0_a603 u0_a603 38K Mar 12 15:05 fileHashes.bin
+-rw-------. 1 u0_a603 u0_a603  17 Mar 12 17:23 fileHashes.lock
+-rw-------. 1 u0_a603 u0_a603 19K Mar 12 15:03 resourceHashesCache.bin
+total 4.0K
+-rw-------. 1 u0_a603 u0_a603 1 Mar 12 17:23 last-build.bin
+total 0
+total 156K
+-rw-------. 1 u0_a603 u0_a603   17 Mar 12 17:23 checksums.lock
+-rw-------. 1 u0_a603 u0_a603  36K Mar 12 17:22 md5-checksums.bin
+-rw-------. 1 u0_a603 u0_a603 131K Mar 12 17:22 sha1-checksums.bin
+total 0
+total 820K
+-rw-------. 1 u0_a603 u0_a603 821K Mar 12 15:05 executionHistory.bin
+-rw-------. 1 u0_a603 u0_a603   17 Mar 12 17:03 executionHistory.lock
+-rw-------. 1 u0_a603 u0_a603 0 Mar 12 14:31 ./.gradle/9.4.0/gc.properties
+total 24K
+-rw-------. 1 u0_a603 u0_a603  17 Mar 12 17:23 buildOutputCleanup.lock
+-rw-------. 1 u0_a603 u0_a603  51 Mar 12 14:31 cache.properties
+-rw-------. 1 u0_a603 u0_a603 20K Mar 12 17:03 outputFiles.bin
+-rw-------. 1 u0_a603 u0_a603 17 Mar 12 17:23 ./.gradle/buildOutputCleanup/buildOutputCleanup.lock
+-rw-------. 1 u0_a603 u0_a603 51 Mar 12 14:31 ./.gradle/buildOutputCleanup/cache.properties
+-rw-------. 1 u0_a603 u0_a603 20K Mar 12 17:03 ./.gradle/buildOutputCleanup/outputFiles.bin
+total 0
+-rw-------. 1 u0_a603 u0_a603 0 Mar 12 14:31 gc.properties
+-rw-------. 1 u0_a603 u0_a603 0 Mar 12 14:31 ./.gradle/vcs-1/gc.properties
+total 3.5K
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 14:31 errors
+total 0
+total 3.5K
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 14:31 wrapper
+total 52K
+-rw-------. 1 u0_a603 u0_a603 48K Mar 12 14:31 gradle-wrapper.jar
+-rw-------. 1 u0_a603 u0_a603 252 Mar 12 14:31 gradle-wrapper.properties
+-rw-------. 1 u0_a603 u0_a603 252 Mar 12 14:31 ./gradle/wrapper/gradle-wrapper.properties
+-rw-------. 1 u0_a603 u0_a603 48K Mar 12 14:31 ./gradle/wrapper/gradle-wrapper.jar
+-rwxr-xr-x. 1 u0_a603 u0_a603 8.5K Mar 12 14:31 ./gradlew
+-rw-------. 1 u0_a603 u0_a603 2.9K Mar 12 14:31 ./gradlew.bat
+total 3.5K
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 14:31 reports
+total 3.5K
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 17:03 problems
+total 136K
+-rw-------. 1 u0_a603 u0_a603 134K Mar 12 17:03 problems-report.html
+-rwx------. 1 u0_a603 u0_a603 1.3K Mar 12 15:01 ./corrigir_manifest_leitor.sh
+-rwx------. 1 u0_a603 u0_a603 5.3K Mar 12 15:14 ./instalar_leitor_universal_completo.sh
+total 39K
+drwx------. 4 u0_a603 u0_a603 3.4K Mar 12 15:15 app
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:15 build
+-rw-------. 1 u0_a603 u0_a603  357 Mar 12 15:15 build.gradle
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:15 gradle
+-rw-------. 1 u0_a603 u0_a603   82 Mar 12 15:15 gradle.properties
+-rwxr-xr-x. 1 u0_a603 u0_a603 8.5K Mar 12 15:15 gradlew
+-rw-------. 1 u0_a603 u0_a603 2.9K Mar 12 15:15 gradlew.bat
+-rw-------. 1 u0_a603 u0_a603   54 Mar 12 15:15 settings.gradle
+total 11K
+drwx------. 5 u0_a603 u0_a603 3.4K Mar 12 15:15 build
+-rw-------. 1 u0_a603 u0_a603  586 Mar 12 15:15 build.gradle
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:15 src
+total 3.5K
+drwx------. 4 u0_a603 u0_a603 3.4K Mar 12 15:15 main
+-rw-------. 1 u0_a603 u0_a603 586 Mar 12 15:15 ./LeitorUniversalIA/app/build.gradle
+total 11K
+drwx------.  3 u0_a603 u0_a603 3.4K Mar 12 15:15 generated
+drwx------. 28 u0_a603 u0_a603 3.4K Mar 12 15:16 intermediates
+drwx------.  3 u0_a603 u0_a603 3.4K Mar 12 15:15 outputs
+-rw-------. 1 u0_a603 u0_a603 54 Mar 12 15:15 ./LeitorUniversalIA/settings.gradle
+-rw-------. 1 u0_a603 u0_a603 357 Mar 12 15:15 ./LeitorUniversalIA/build.gradle
+-rw-------. 1 u0_a603 u0_a603 82 Mar 12 15:15 ./LeitorUniversalIA/gradle.properties
+total 14K
+drwx------. 8 u0_a603 u0_a603 3.4K Mar 12 15:15 9.4.0
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:15 buildOutputCleanup
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:15 kotlin
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:15 vcs-1
+total 21K
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:15 checksums
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:15 executionHistory
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:15 expanded
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:15 fileChanges
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:15 fileHashes
+-rw-------. 1 u0_a603 u0_a603    0 Mar 12 15:15 gc.properties
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:15 vcsMetadata
+total 24K
+-rw-------. 1 u0_a603 u0_a603  17 Mar 12 15:16 buildOutputCleanup.lock
+-rw-------. 1 u0_a603 u0_a603  51 Mar 12 15:15 cache.properties
+-rw-------. 1 u0_a603 u0_a603 20K Mar 12 15:16 outputFiles.bin
+total 0
+-rw-------. 1 u0_a603 u0_a603 0 Mar 12 15:15 gc.properties
+total 3.5K
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:15 errors
+total 3.5K
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:15 wrapper
+total 52K
+-rw-------. 1 u0_a603 u0_a603 48K Mar 12 15:15 gradle-wrapper.jar
+-rw-------. 1 u0_a603 u0_a603 252 Mar 12 15:15 gradle-wrapper.properties
+-rwxr-xr-x. 1 u0_a603 u0_a603 8.5K Mar 12 15:15 ./LeitorUniversalIA/gradlew
+-rw-------. 1 u0_a603 u0_a603 2.9K Mar 12 15:15 ./LeitorUniversalIA/gradlew.bat
+total 3.5K
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:15 reports
+total 3.5K
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:16 problems
+total 198K
+-rw-------.   1 u0_a603 u0_a603   44 Mar 12 17:25 COMMIT_EDITMSG
+-rw-------.   1 u0_a603 u0_a603  111 Mar 12 16:16 FETCH_HEAD
+-rw-------.   1 u0_a603 u0_a603   21 Mar 12 15:22 HEAD
+-rw-------.   1 u0_a603 u0_a603   41 Mar 12 16:16 ORIG_HEAD
+-rw-------.   1 u0_a603 u0_a603  276 Mar 12 15:48 config
+-rw-------.   1 u0_a603 u0_a603   73 Mar 12 15:20 description
+drwx------.   2 u0_a603 u0_a603 3.4K Mar 12 15:20 hooks
+-rw-------.   1 u0_a603 u0_a603 141K Mar 12 17:25 index
+drwx------.   2 u0_a603 u0_a603 3.4K Mar 12 15:20 info
+drwx------.   3 u0_a603 u0_a603 3.4K Mar 12 15:20 logs
+drwx------. 249 u0_a603 u0_a603  20K Mar 12 17:25 objects
+drwx------.   5 u0_a603 u0_a603 3.4K Mar 12 15:48 refs
+-rw-------. 1 u0_a603 u0_a603 73 Mar 12 15:20 ./.git/description
+total 64K
+-rwx------. 1 u0_a603 u0_a603  509 Mar 12 15:20 applypatch-msg.sample
+-rwx------. 1 u0_a603 u0_a603  927 Mar 12 15:20 commit-msg.sample
+-rwx------. 1 u0_a603 u0_a603 4.7K Mar 12 15:20 fsmonitor-watchman.sample
+-rwx------. 1 u0_a603 u0_a603  220 Mar 12 15:20 post-update.sample
+-rwx------. 1 u0_a603 u0_a603  455 Mar 12 15:20 pre-applypatch.sample
+-rwx------. 1 u0_a603 u0_a603 1.7K Mar 12 15:20 pre-commit.sample
+-rwx------. 1 u0_a603 u0_a603  447 Mar 12 15:20 pre-merge-commit.sample
+-rwx------. 1 u0_a603 u0_a603 1.4K Mar 12 15:20 pre-push.sample
+-rwx------. 1 u0_a603 u0_a603 4.9K Mar 12 15:20 pre-rebase.sample
+-rwx------. 1 u0_a603 u0_a603  575 Mar 12 15:20 pre-receive.sample
+-rwx------. 1 u0_a603 u0_a603 1.6K Mar 12 15:20 prepare-commit-msg.sample
+-rwx------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 push-to-checkout.sample
+-rwx------. 1 u0_a603 u0_a603 2.3K Mar 12 15:20 sendemail-validate.sample
+-rwx------. 1 u0_a603 u0_a603 3.6K Mar 12 15:20 update.sample
+-rwx------. 1 u0_a603 u0_a603 927 Mar 12 15:20 ./.git/hooks/commit-msg.sample
+-rwx------. 1 u0_a603 u0_a603 4.7K Mar 12 15:20 ./.git/hooks/fsmonitor-watchman.sample
+-rwx------. 1 u0_a603 u0_a603 220 Mar 12 15:20 ./.git/hooks/post-update.sample
+-rwx------. 1 u0_a603 u0_a603 455 Mar 12 15:20 ./.git/hooks/pre-applypatch.sample
+-rwx------. 1 u0_a603 u0_a603 1.7K Mar 12 15:20 ./.git/hooks/pre-commit.sample
+-rwx------. 1 u0_a603 u0_a603 447 Mar 12 15:20 ./.git/hooks/pre-merge-commit.sample
+-rwx------. 1 u0_a603 u0_a603 1.4K Mar 12 15:20 ./.git/hooks/pre-push.sample
+-rwx------. 1 u0_a603 u0_a603 4.9K Mar 12 15:20 ./.git/hooks/pre-rebase.sample
+-rwx------. 1 u0_a603 u0_a603 575 Mar 12 15:20 ./.git/hooks/pre-receive.sample
+-rwx------. 1 u0_a603 u0_a603 1.6K Mar 12 15:20 ./.git/hooks/prepare-commit-msg.sample
+-rwx------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 ./.git/hooks/push-to-checkout.sample
+-rwx------. 1 u0_a603 u0_a603 2.3K Mar 12 15:20 ./.git/hooks/sendemail-validate.sample
+-rwx------. 1 u0_a603 u0_a603 3.6K Mar 12 15:20 ./.git/hooks/update.sample
+-rwx------. 1 u0_a603 u0_a603 509 Mar 12 15:20 ./.git/hooks/applypatch-msg.sample
+total 4.0K
+-rw-------. 1 u0_a603 u0_a603 240 Mar 12 15:20 exclude
+-rw-------. 1 u0_a603 u0_a603 240 Mar 12 15:20 ./.git/info/exclude
+total 11K
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 17:25 heads
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:48 remotes
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 tags
+total 4.0K
+-rw-------. 1 u0_a603 u0_a603 41 Mar 12 17:25 main
+total 0
+total 3.5K
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 17:27 origin
+-rw-------. 1 u0_a603 u0_a603 276 Mar 12 15:48 ./.git/config
+total 865K
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 00
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 01
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 02
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 03
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 04
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 05
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 06
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 17:25 07
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 08
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 09
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 0a
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 17:25 0b
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 0c
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 0d
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 0e
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 0f
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 10
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 11
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 12
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 13
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 14
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 15
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 16
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 17
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 18
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 19
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 1a
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 1b
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 1c
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 1d
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 1e
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 20
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 17:25 21
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 22
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 23
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 25
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 26
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 27
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 28
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 29
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 2a
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 2b
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 2c
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 2d
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 2e
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 2f
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 30
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 31
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 32
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 33
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 34
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 35
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 36
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 37
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 38
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 17:25 39
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 3a
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 3b
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 3c
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 3d
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 3e
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 3f
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 40
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 41
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 42
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 43
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 44
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 45
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 46
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 47
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 48
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 49
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 4a
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 4b
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 4c
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 4d
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 4e
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 4f
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 17:25 50
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 51
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 52
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 53
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 17:25 54
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 55
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 56
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 57
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 58
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 59
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 5b
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 5c
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 5d
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 5e
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 5f
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 60
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 61
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 62
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 63
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 64
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 65
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 66
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 67
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 68
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 17:25 69
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 6a
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 6b
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 6c
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 6d
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 6e
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 70
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 17:25 71
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 72
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 73
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 74
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 75
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 76
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 77
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 78
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 79
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 7a
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 7b
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 7c
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 7d
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 7e
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 7f
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 80
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 81
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 82
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 83
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 84
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 86
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 87
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 88
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 89
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 8a
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 8b
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 17:25 8c
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 8d
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 8e
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 8f
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 90
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 91
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 92
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 93
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 94
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 95
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 97
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 98
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 99
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 9a
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 9b
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 17:25 9c
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 9d
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 9e
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 9f
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 a0
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 a1
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 17:25 a2
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 a3
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 a4
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 17:25 a5
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 a6
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 a7
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 a8
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 a9
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 aa
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 ab
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 ac
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 ad
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 ae
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 af
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 b0
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 b1
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 b2
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 b3
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 b4
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 b5
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 b6
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 b7
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 b8
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 b9
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 ba
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 bb
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 bc
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 bd
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 bf
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 c0
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 17:25 c1
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 c2
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 c3
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 c5
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 c6
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 c7
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 c8
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 c9
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 ca
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 cb
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 cc
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 cd
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 cf
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 d0
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 d1
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 d2
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 d3
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 17:25 d4
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 d5
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 d6
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 d7
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 d8
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 d9
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 da
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 db
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 dc
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 dd
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 de
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 df
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 e0
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 e1
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 e2
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 e3
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 e4
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 e5
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 e6
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 e7
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 e8
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 ea
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 eb
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 ec
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 ed
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 ee
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 f0
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 f1
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 f2
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 f3
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 f4
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 17:25 f5
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 f6
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 f7
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 f8
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 f9
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 fa
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 fb
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 fc
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 fd
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 fe
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 ff
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 info
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:20 pack
+total 0
+total 0
+total 12K
+-r--------. 1 u0_a603 u0_a603  58 Mar 12 15:20 6efbce62f9226e051cf85216722c3cc8c09abf
+-r--------. 1 u0_a603 u0_a603  30 Mar 12 15:20 7df000bc7accd04956d44c0992b9d70548944d
+-r--------. 1 u0_a603 u0_a603 406 Mar 12 15:20 97ec1dad28d414d5d59d995a996a076085e72e
+total 40K
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 00ff3bc0193978425a3854e5ba2d3771579e14
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 0bdefcc3614f9e66c7ea192cc1da72304d0e8d
+-r--------. 1 u0_a603 u0_a603   57 Mar 12 15:20 32a80b8c594077c5ca7d2b455d9a884271d135
+-r--------. 1 u0_a603 u0_a603 2.3K Mar 12 15:20 43639084208694cf5251b6d712fc0f3df3b1e0
+-r--------. 1 u0_a603 u0_a603  112 Mar 12 15:20 5725e4fbd494f3d473c47b1cebb4267775a2b2
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 883ebafe0f8ee817d829e4105d389af784a74b
+-r--------. 1 u0_a603 u0_a603 5.2K Mar 12 15:20 9ce23dafb44e12019a1719ba9867457193feb9
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 a76f1076455dcf71fcdb9bca65346cd2e00d47
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 d93aaa5a56ef60158c7fd4866fab7bc88bc856
+total 24K
+-r--------. 1 u0_a603 u0_a603 13K Mar 12 15:20 4038511158e36671e3be33e1711f0e35f727d9
+-r--------. 1 u0_a603 u0_a603 122 Mar 12 15:20 a418bb2f6705897a3dc946d6f13ace61af4dd7
+-r--------. 1 u0_a603 u0_a603 138 Mar 12 15:20 e58b6cefeb4396fc0d21497f37a832c1bdcb8f
+total 132K
+-r--------. 1 u0_a603 u0_a603   65 Mar 12 17:25 72eba9054c0348e85f66ec13d88ea47536681c
+-r--------. 1 u0_a603 u0_a603 125K Mar 12 15:20 a44abce53cd537821e9d24b34285333bca3bba
+total 12K
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 479ba50a65b4f4d4df97565debd7b9b041c092
+-r--------. 1 u0_a603 u0_a603   29 Mar 12 15:20 4b2064b3eb31bc8d6929945562bf4b90ca6bf6
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 91a3b89cdcf12b240409b10e8ed7e767cb4f0a
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 16 Mar 12 17:25 6dd238ade08917e6712764a16a22005a50573d
+total 36K
+-r--------. 1 u0_a603 u0_a603   64 Mar 12 15:20 02b383793fe949955a883e75ae317431630b03
+-r--------. 1 u0_a603 u0_a603  15K Mar 12 15:20 315d702249b944d3de4920f0556c1a7a29788d
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 3b4b8864bde3e212ac859ba32174f97847f3d0
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 7e64f048548579298f56743996b4bc9b23b17c
+-r--------. 1 u0_a603 u0_a603  479 Mar 12 17:25 c772b160eaf112baa97222c36f8919ec07d1fa
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 eff906ecfc857e7f3c8d817a1e14fc5b7e8048
+total 16K
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 017c98dad6ac0e40e41a8e648e6eea40635055
+-r--------. 1 u0_a603 u0_a603   30 Mar 12 15:20 57ae2d74ce427f584d9801b5585c919e0722ef
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 604383d502dacb7abf354d04db7ae2fca811b2
+-r--------. 1 u0_a603 u0_a603   57 Mar 12 15:20 f4f43f41a28a3a5ef4c772f79302ecf411de26
+total 12K
+-r--------. 1 u0_a603 u0_a603 2.9K Mar 12 15:20 2b48799052192dafbc5e8a240dd15dd9eaa8cb
+-r--------. 1 u0_a603 u0_a603  353 Mar 12 15:20 4973ee81e26ba33ef510de7dc6f1e42e9536a7
+-r--------. 1 u0_a603 u0_a603 3.4K Mar 12 15:20 c3779fa96cf0a235f0bbe114410ca137bbf719
+total 12K
+-r--------. 1 u0_a603 u0_a603   87 Mar 12 15:20 340394c8e116544a2b09f5fa5a4ef83093b940
+-r--------. 1 u0_a603 u0_a603 4.0K Mar 12 15:20 92ff9d2d396c72d569840ad08f87f8661f75a9
+-r--------. 1 u0_a603 u0_a603   15 Mar 12 15:20 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+total 20K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 3088f87a28b1c5e3e5efd2bef9a5f070232b2f
+-r--------. 1 u0_a603 u0_a603 4.0K Mar 12 15:20 33e1eab2e10e06ad18c2016a980d1160aeaa75
+-r--------. 1 u0_a603 u0_a603   76 Mar 12 15:20 36761937fbfff0912000dd03a003cc48178b06
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 5a476dab743b3f1860169a0f3982257a942810
+-r--------. 1 u0_a603 u0_a603   28 Mar 12 15:20 83b1207c28e09301f8bcdc971345fe80bf93ab
+total 12K
+-r--------. 1 u0_a603 u0_a603   67 Mar 12 15:20 203945228c8b214c41bcf283dfb36f021799a8
+-r--------. 1 u0_a603 u0_a603 1.1K Mar 12 15:20 887cb7660c5d2f858eb8943b3206b28a69f1f4
+-r--------. 1 u0_a603 u0_a603 3.1K Mar 12 15:20 8c33525afcc177fa57533077deb0217a0db29d
+total 16K
+-r--------. 1 u0_a603 u0_a603 1.5K Mar 12 17:25 0186a374a6fe545eff4f2e6fb72688c637f091
+-r--------. 1 u0_a603 u0_a603  557 Mar 12 15:20 1224c44ab113105f43893eb404183dc562629a
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 39a50a440e475be575d9ddfb0d5a36972df45e
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 81ee7faf3787931643d59f48172f7608c3754a
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 27 Mar 12 15:20 73c813cad2230fb05aa1ac2f69ed9d9079969b
+-r--------. 1 u0_a603 u0_a603 57 Mar 12 15:20 e2f47c952545bcc3f5be561cd44ebf520950f5
+total 136K
+-r--------. 1 u0_a603 u0_a603   55 Mar 12 15:20 2c8b0a68bcbd739a6205cb7f39e10a8f85b808
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 301375766956a0918c5dad4f612b10be1c1073
+-r--------. 1 u0_a603 u0_a603 124K Mar 12 15:20 ea551afa9fba1c3d7a92bbc5ceacdffa791deb
+-r--------. 1 u0_a603 u0_a603   48 Mar 12 15:20 ef5e1b466e1f4e4697e4927cf9e3ff8ce0eede
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 4da18a094ae99284c536bf0897e31c5a8e4611
+-r--------. 1 u0_a603 u0_a603   29 Mar 12 15:20 7c0388bd41528d6c7001de7ead23d28764ecd9
+total 16K
+-r--------. 1 u0_a603 u0_a603 15K Mar 12 15:20 809af967eccd44824a1c9f4a5ac0b05dddd57b
+total 20K
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 292ce9eb18e2f8ac13e1c5fd64b7345928edfb
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 31423effddf6d633f7c95fe5308aea33d1190e
+-r--------. 1 u0_a603 u0_a603   29 Mar 12 15:20 3cfb4fa2dfff8fd3d03a7802ff069d2a4b491a
+-r--------. 1 u0_a603 u0_a603  944 Mar 12 15:20 5758995063859d1e311ec6eca38f4bb78a4d90
+-r--------. 1 u0_a603 u0_a603 3.1K Mar 12 15:20 8585a6c783200f880f6312b6ca116856be6a64
+total 12K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 03a6ca405d7af25479dffc43c826e247a4e5cd
+-r--------. 1 u0_a603 u0_a603  145 Mar 12 17:25 72127061f312fdb7c3b6b7927d459282e2a085
+-r--------. 1 u0_a603 u0_a603   29 Mar 12 15:20 eb42abb38878c61b9790ff02664e2822232eec
+total 20K
+-r--------. 1 u0_a603 u0_a603 2.0K Mar 12 15:20 1c6d4cc06a3db90d3f5e925e98c625603f7394
+-r--------. 1 u0_a603 u0_a603 3.5K Mar 12 15:20 9bf872979bf40f6fc620784f5cf1de9798ec88
+-r--------. 1 u0_a603 u0_a603 3.4K Mar 12 15:20 9c8e348ee10824af6a09aaae0d218fe149a13e
+-r--------. 1 u0_a603 u0_a603   67 Mar 12 15:20 dc3c372323bd89c779acfd2415c2b160b31c9d
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 ff56508a66d62f37c85c516c4e7b37fc86540e
+total 28K
+-r--------. 1 u0_a603 u0_a603 1.5K Mar 12 15:20 0ab75bc87eb28bf338be16c69b573dca7e772f
+-r--------. 1 u0_a603 u0_a603   45 Mar 12 15:20 65b1bb3cdcbfb6e6116597aa588562b31a2b5d
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 6ca68dfd33236db403dbcff4d0730ed1a253e4
+-r--------. 1 u0_a603 u0_a603 3.9K Mar 12 15:20 8ceb40cd2660c023ac73e9fcea0a707894fe75
+-r--------. 1 u0_a603 u0_a603  172 Mar 12 15:20 99d2cf3729a0b92b869da97322e3cb7fc544c2
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 fd25f1418928443346f52985bef897cb85f370
+-r--------. 1 u0_a603 u0_a603  135 Mar 12 15:20 fed6b9e5cb70ebe81b7f8a13f09403f847fa31
+total 12K
+-r--------. 1 u0_a603 u0_a603 315 Mar 12 15:20 41a1622fc194398d12ab3fa0462aa0c9d52b04
+-r--------. 1 u0_a603 u0_a603  58 Mar 12 15:20 afeb6936f32388887edefffcc87177fce22aec
+-r--------. 1 u0_a603 u0_a603 121 Mar 12 15:20 f97eeac991c913c14465d0a6d120aa4b8780c0
+total 20K
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 1a5c581250b8eaabcac8e352631ea5c0450082
+-r--------. 1 u0_a603 u0_a603   17 Mar 12 15:20 26dfeeb6e641a33dae4961196235bdb965b21b
+-r--------. 1 u0_a603 u0_a603   78 Mar 12 15:20 3a43612ae0b48c258fab1880d595b81d873af1
+-r--------. 1 u0_a603 u0_a603   55 Mar 12 15:20 cbd843fd38e75c6bbf852982b9ab17da5e6562
+-r--------. 1 u0_a603 u0_a603   54 Mar 12 15:20 ff9677bb4d50b216a0a4e8c9f1c1ce6c3b969f
+total 20K
+-r--------. 1 u0_a603 u0_a603 4.8K Mar 12 15:20 2fb7af4880ca2a983be3af66247d23af721c7e
+-r--------. 1 u0_a603 u0_a603   55 Mar 12 15:20 7caad38bab89f4f03764e5f58bc19dfd359f0c
+-r--------. 1 u0_a603 u0_a603   66 Mar 12 15:20 a1a4c6237fc85e80bdb70d91251559c972f7a8
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 d74d8aa4e95fc99afe52b89e806d278acfd060
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 170 Mar 12 15:20 74ffa70716dbe261d35c5bfa350c13070379ce
+-r--------. 1 u0_a603 u0_a603 127 Mar 12 15:20 96ad57fae178ac5305a8b12ad2f3bd2f62f770
+total 3.9M
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 52c1d1137151d30240754552f26370f928439a
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 7edf7d4220b89732fb659368c931015b1a3769
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 aba2b5743bb927dd595f4d511a0b5f5f6e36a0
+-r--------. 1 u0_a603 u0_a603 3.1K Mar 12 15:20 ce99e9c56bbdab4dc2704896eb244933e713c2
+-r--------. 1 u0_a603 u0_a603  521 Mar 12 15:20 e0a9069974eda7cba9b171619b0528a77881cf
+-r--------. 1 u0_a603 u0_a603 3.8M Mar 12 15:20 e56660e374648c812b6f179a3f73b02e24f4be
+total 12K
+-r--------. 1 u0_a603 u0_a603  50 Mar 12 15:20 85c91c08d07684ae3995a194c24289f756965d
+-r--------. 1 u0_a603 u0_a603 177 Mar 12 15:20 9a58dd8628c2e8c4b604d83ffb5dcb6670724a
+-r--------. 1 u0_a603 u0_a603  62 Mar 12 15:20 de85da1cfd2a652084fe7ba3f34a6eed4b70b3
+total 8.0K
+-r--------. 1 u0_a603 u0_a603   81 Mar 12 15:20 99335f16e88648950014727f03da1f253382f6
+-r--------. 1 u0_a603 u0_a603 2.7K Mar 12 15:20 e0cadfc898ab11ee7a72148349d11a06fd1cff
+total 28K
+-r--------. 1 u0_a603 u0_a603 1.5K Mar 12 15:20 5db638956131a06d6604acd570d07bf2eaec3a
+-r--------. 1 u0_a603 u0_a603   47 Mar 12 15:20 670917f39d996880c39c387ecbb64d7260ea34
+-r--------. 1 u0_a603 u0_a603 3.0K Mar 12 15:20 6ed10b65188476962037bc144463e6743c1443
+-r--------. 1 u0_a603 u0_a603 3.1K Mar 12 15:20 7ef4830e1618596952a7d7e8b2daa86544b6f8
+-r--------. 1 u0_a603 u0_a603   46 Mar 12 15:20 b7f6dd51b05d89d0676f77687e8f78c27da7d9
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 c485ef59f605a76d4b7eb6a22c7d122196cf7c
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 d52e24ccc444d84b8086d2dc7420fcea4aac7c
+total 16K
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 29a5ef0814458b6f784d745be59b698480d5dc
+-r--------. 1 u0_a603 u0_a603   57 Mar 12 15:20 b57d786f4f316cacb07b62c5548252cd96b6d2
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 b9434b812959375eb78a613de8084706247059
+-r--------. 1 u0_a603 u0_a603 3.1K Mar 12 15:20 def9ac21e2716f9f05df5b5c39507bcc683607
+total 212K
+-r--------. 1 u0_a603 u0_a603  282 Mar 12 15:20 54b45bce54e9945636b533d127fafe26f9b937
+-r--------. 1 u0_a603 u0_a603 3.0K Mar 12 15:20 576456e4a7389c5cbe39860939e8e88b36498b
+-r--------. 1 u0_a603 u0_a603 197K Mar 12 15:20 8c9be4ed3f82cf77fab3e9c8de7588311ffd0f
+-r--------. 1 u0_a603 u0_a603  384 Mar 12 15:20 c8fb9cb03bf19d35a8a4fa51aed3fbb325ecb7
+total 12K
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 440eefd352427cead4665de8824f2d2bd99e82
+-r--------. 1 u0_a603 u0_a603  151 Mar 12 15:20 7845cacdc9f0cdc7e19d912cf6ec70e4896c63
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 ed235be57112f5c82758b384f756332b2df868
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 6cbd040ff7d8111649cb35dd928fd105f8bbfa
+-r--------. 1 u0_a603 u0_a603   65 Mar 12 15:20 bd090eebbd973147d95147014ca39a7f51292b
+total 24K
+-r--------. 1 u0_a603 u0_a603  138 Mar 12 15:20 75bf57c763a75f09e7ecb4e02e882b446caff1
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 8b5b334f92e6da9a02522ef7c87823469c34b2
+-r--------. 1 u0_a603 u0_a603 2.9K Mar 12 15:20 909a67b912c02616148d97a435c2d54ac77ab8
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 91a74a4cd99363a7d2dbae0d11d89b58c22da0
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 bfd0498f108d9ea0cd54bdfac6e18ab76677d5
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 e603b6652e156d808a3b7d6fc5cbe42302d865
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 3.9K Mar 12 15:20 3ba822b6cec3fcf1be64677646b593786049ec
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 d5b25040200cbee42efad0e50e816f2946b1a6
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 3.4K Mar 12 15:20 3f124e6b50a86b7be4f6c1dd794949fcc22bb2
+total 12K
+-r--------. 1 u0_a603 u0_a603 2.9K Mar 12 15:20 82094b0b0e09e67b7549f456eaa9c1ab8c76d3
+-r--------. 1 u0_a603 u0_a603  172 Mar 12 15:20 9f3269f15bfa73a55ec4de3e26a58b7442e9a6
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 ddd760109403f02dda6c9cf49729091234d1b7
+total 20K
+-r--------. 1 u0_a603 u0_a603 2.9K Mar 12 15:20 10c6ec395a2231852ef559e5ae82c363c650aa
+-r--------. 1 u0_a603 u0_a603  503 Mar 12 15:20 3146a38e88ea087fce1e89ee07959203ba88ed
+-r--------. 1 u0_a603 u0_a603  217 Mar 12 15:20 8d42f294f97d7c62ec46a7974de0591922ecce
+-r--------. 1 u0_a603 u0_a603   30 Mar 12 17:25 927db05963b8fd6d05bc7a90762d49a8d1e7d9
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 a04c5d9ab354e3c3d69b73e36e6a11ade3dfbc
+total 24K
+-r--------. 1 u0_a603 u0_a603 7.6K Mar 12 15:20 234d87a96d58368d2df798f189c6de20cace06
+-r--------. 1 u0_a603 u0_a603  281 Mar 12 15:20 51e99286ed322fcaeb552228a5118427e47762
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 6630061977b18b1070b3cdc5267365a59af8a4
+-r--------. 1 u0_a603 u0_a603  385 Mar 12 15:20 971691000c1d3245b736a1855608e36b2330a9
+-r--------. 1 u0_a603 u0_a603 2.9K Mar 12 15:20 e0d135b769bb00f7baf84ab8b815473beda175
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 2.7K Mar 12 15:20 b4d938cc5608d2680e7c8ea9f059dad4f79ddb
+-r--------. 1 u0_a603 u0_a603  546 Mar 12 15:20 c27c1f6dbc543eec25c54b9aee206228452bc9
+total 16K
+-r--------. 1 u0_a603 u0_a603 2.0K Mar 12 15:20 075ab6566fdf2303c58fec9ae206dc4dcb1aa3
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 108766141e0d89e06164a7d2f0d44cb772887e
+-r--------. 1 u0_a603 u0_a603   57 Mar 12 15:20 8b83b569a6922c6556790764b929a7a9b533cc
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 fd853503fb5a791663ac1f4714df79f0824f00
+total 12K
+-r--------. 1 u0_a603 u0_a603   57 Mar 12 15:20 47d1b0a3b5d7bde826deede7b5a346e2cc2b51
+-r--------. 1 u0_a603 u0_a603   57 Mar 12 15:20 d5c33aa95531534608f56f5440ec5b1c81ad16
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 d67b921bf922bb2aed644020fc75ad4c653510
+total 16K
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 2b3c146c3c45654b1160e672fdb5ce19ae96bf
+-r--------. 1 u0_a603 u0_a603  801 Mar 12 15:20 3dd8e4fee0e85b5b50ae6e8be3d50e232a8092
+-r--------. 1 u0_a603 u0_a603  252 Mar 12 15:20 64aad660d5453d85971b0b7534d54dfc47c563
+-r--------. 1 u0_a603 u0_a603 1.3K Mar 12 15:20 ff55dd78c96e39459cf36ca461f5f4a90d9619
+total 20K
+-r--------. 1 u0_a603 u0_a603  198 Mar 12 15:20 58432089a442eebbdb716364ea027759ab4b84
+-r--------. 1 u0_a603 u0_a603 1.3K Mar 12 15:20 83d64ab4dd839ecdae5c9270c982064134b9c8
+-r--------. 1 u0_a603 u0_a603  115 Mar 12 15:20 a43e2715d0bc8613ad8986c54ffa5032aa2603
+-r--------. 1 u0_a603 u0_a603  246 Mar 12 15:20 c40fd812088817d77fc0d9f21e9e3c1ece2333
+-r--------. 1 u0_a603 u0_a603   45 Mar 12 15:20 d51e633d7064c34cb18383bacd61468814f2d9
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 3.1K Mar 12 15:20 53bae661fa75b7a3c6eb4a9426f68da2dd1ee3
+-r--------. 1 u0_a603 u0_a603 2.5K Mar 12 15:20 fae9cd625df636b25e683b499e14b50b1f7c96
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 2.7K Mar 12 15:20 a3d53654298c774853b0c91e5993c6ef719715
+total 12K
+-r--------. 1 u0_a603 u0_a603   65 Mar 12 15:20 22380ed5289795f87c53d3f4dab54c258f7950
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 4165f0161b9e9a7d650602960e4de0eb0571d7
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 4896fac8f4003a6be68ec693f5ad989c141095
+total 16K
+-r--------. 1 u0_a603 u0_a603   68 Mar 12 15:20 0f42fab16e5bc3b44d8bbdb0d48506fa822f12
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 6f0008e8b50fe671b9484c3fad1948ab4eec19
+-r--------. 1 u0_a603 u0_a603   47 Mar 12 15:20 9139f2e369bcb20006d682dc393e6571451687
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 d563430fb5034e687216908f41d9168e814890
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 3.0K Mar 12 15:20 dce37bcbbef7c4a6b9215a7d128be1924cfbb1
+total 12K
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 372abba7ef05f562f5a787cca34e699b2d1606
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 4deaa87c3a62798df256cbaf68d1f31219db3f
+-r--------. 1 u0_a603 u0_a603 3.9K Mar 12 15:20 a7bcf37b38525dece94eb704cccb3f0aa3b468
+total 20K
+-r--------. 1 u0_a603 u0_a603  188 Mar 12 15:20 14e49b75631648474dfde2d58b377018777a2a
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 28842d4d4b7cfa6cecb1a9cd8761dc54c7dee9
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 7ab501590491ea386cbbe765a22eded45df295
+-r--------. 1 u0_a603 u0_a603 3.5K Mar 12 15:20 e84a64d8d048e9a01f4d35c01145239c587c6e
+-r--------. 1 u0_a603 u0_a603 2.9K Mar 12 15:20 e9d18a5f5e2f6de86959300f7621aa5bec9b0b
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 116ae097a889799752455d12cf2a3ce9e6d970
+-r--------. 1 u0_a603 u0_a603   64 Mar 12 15:20 749fcb284771e1605f62bca8cfc482fdd744a8
+total 12K
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 0c2e026db9252f30ec904a986c11fede2c474e
+-r--------. 1 u0_a603 u0_a603  431 Mar 12 15:20 40dd84756c613fc5cfaabce7f3dd08b7e268d2
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 d8d53d371f2a076831cb71031e8ab7e91848ad
+total 24K
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 2d33e8b4399c3a2e4f812891fc659c2b098269
+-r--------. 1 u0_a603 u0_a603 2.9K Mar 12 15:20 455cb7f5ff89a37d24619524e5ce5e5f9b1519
+-r--------. 1 u0_a603 u0_a603   50 Mar 12 17:25 a5d69d68351cd48651d0f5757f9e76acc947f3
+-r--------. 1 u0_a603 u0_a603  211 Mar 12 15:20 adce119b5a468adbdeb0a0b1823549b19e08b2
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 b57a61cf5941624cddbbcb48cd254636c430d9
+-r--------. 1 u0_a603 u0_a603 2.0K Mar 12 15:20 d0813ca8033d8b21f51273de665d3346ce1c89
+total 32K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 01d9e6dab691f831c088096cd553574c259146
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 14c7e04d8a683122cfc62496d469c3bac6f315
+-r--------. 1 u0_a603 u0_a603 3.5K Mar 12 15:20 295d33356fa17387e8e6c3ed794ac846d44bcb
+-r--------. 1 u0_a603 u0_a603  295 Mar 12 15:20 30067cdbcd43aff413606d8c06637ce2d9bf86
+-r--------. 1 u0_a603 u0_a603  145 Mar 12 15:20 5dede04e5c33f368d71cf399bd7acf673a2f6f
+-r--------. 1 u0_a603 u0_a603  392 Mar 12 15:20 847b145476ae88d91e20d25388d1ef51715514
+-r--------. 1 u0_a603 u0_a603   48 Mar 12 15:20 89f21eabc8d20bccf3b7b220c3dbf68077e860
+-r--------. 1 u0_a603 u0_a603  210 Mar 12 15:20 eb4225011a799319c7e4c9c6d2d71c366c83ee
+total 16K
+-r--------. 1 u0_a603 u0_a603  801 Mar 12 15:20 0015228c0b4c9ad39da08238d88591ffa2ad5d
+-r--------. 1 u0_a603 u0_a603 1011 Mar 12 15:20 9794ca5e3dd53208548695b3d967d9e5cfb44a
+-r--------. 1 u0_a603 u0_a603   48 Mar 12 15:20 b2b2706e91e73cba387601bcf42e9f77526886
+-r--------. 1 u0_a603 u0_a603  122 Mar 12 15:20 e1136d1357f534bdab6dc95613b9650f8197b9
+total 28K
+-r--------. 1 u0_a603 u0_a603   57 Mar 12 15:20 20cc7f10247c059021d314918172e4552e7d5e
+-r--------. 1 u0_a603 u0_a603 4.1K Mar 12 15:20 22fea7fec080c742816d79f329975745fc1ec4
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 39b9796a0c7d30a74c707cdb79b29fe231164e
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 56844548d253914394d387e9db9d58ed21ea70
+-r--------. 1 u0_a603 u0_a603  124 Mar 12 15:20 8bb90b3581627d059565973a7443441a887fe9
+-r--------. 1 u0_a603 u0_a603   71 Mar 12 15:20 a939d53a96eeec29ba49c562bb5e404ae726bb
+total 8.0K
+-r--------. 1 u0_a603 u0_a603  207 Mar 12 15:20 a138ef9b4a8d1276f694e95d0e0293771d92ae
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 c521123a2932f668b49850e34d6e2061607d81
+total 8.0K
+-r--------. 1 u0_a603 u0_a603   81 Mar 12 15:20 1e6865035183438acf3ff9a68f42971b90e315
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 2ceac1f072c5e2387d94de922cd1eba5b46898
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 2.9K Mar 12 15:20 fefd5fbb6eb653e28f6768c3e16fec8e6a4a84
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 3d932e6796a030af14c9cf9371eecd7fb7bc4e
+-r--------. 1 u0_a603 u0_a603 2.9K Mar 12 15:20 4cf4b9212d356392bd014edf7e56760f020fa4
+total 16K
+-r--------. 1 u0_a603 u0_a603   59 Mar 12 15:20 39688b2a10711714aa38b07842623e468cdf6e
+-r--------. 1 u0_a603 u0_a603 2.7K Mar 12 15:20 96eeff365a3553486a30b8460bf919fdbf572c
+-r--------. 1 u0_a603 u0_a603  204 Mar 12 15:20 ce01fb81d9e3931cf4c1d59a2b061ada7bd377
+-r--------. 1 u0_a603 u0_a603 3.7K Mar 12 15:20 d7846c4ba6fdc1a4dbee31c05733a2a0d01170
+total 12K
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 036ed78cd787872bc65c26227fdbb9711a777b
+-r--------. 1 u0_a603 u0_a603  370 Mar 12 15:20 80232c04b1eea70d87249881e24d6599da2f80
+-r--------. 1 u0_a603 u0_a603  117 Mar 12 15:20 af955918c339a3affe18855c79ec768c90d497
+total 12K
+-r--------. 1 u0_a603 u0_a603 2.9K Mar 12 15:20 475814867dbfc947514b6b4c23ee0f59ca3104
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 4b56107298f5940b76d91a1e86730f5cf07e5c
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 ad25325976c6b07b143cdfd9b5d1754c68782b
+total 12K
+-r--------. 1 u0_a603 u0_a603 3.0K Mar 12 15:20 87fe029ed0e2c18df2a87f24fb125048d24555
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 aea798039824b67df945fee25ae31970a41d68
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 c97399953602a5d793e352daee7241da91c882
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 e28bfe45f8e0039fa83188bf6d00f9dec75acc
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 3.4K Mar 12 15:20 38bb57a9ca203a749c0ad8a30667faf64edc89
+-r--------. 1 u0_a603 u0_a603 3.9K Mar 12 15:20 428355bd3de7dbea43fdb01312305a60468c2e
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 2.9K Mar 12 15:20 0c205459dcdd469cc2070f5da98ee8d7b7164e
+-r--------. 1 u0_a603 u0_a603   60 Mar 12 15:20 abbe27560269a51404c701facab16623690305
+total 12K
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 42a2845f846081973d68e45f60e7d08a68af8c
+-r--------. 1 u0_a603 u0_a603  318 Mar 12 15:20 441d3fce3cf22589458e7b618a5c1a15bec5da
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 aea3251fffb5eb74f8cfd44de7ac50ed29f74a
+total 16K
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 1a1f942e89dfc5f243d8f7b72ac7c5caec3158
+-r--------. 1 u0_a603 u0_a603  131 Mar 12 15:20 379dd9ffddeb59301e59ed560062df485746a1
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 7ae5b6ed3313a63bea648cb31fb0cffd0833ee
+-r--------. 1 u0_a603 u0_a603  321 Mar 12 15:20 84ad35e978ebcdb720d36c3dfe4bdf4993e0df
+total 12K
+-r--------. 1 u0_a603 u0_a603 1.9K Mar 12 15:20 31eb5bde8023e227dd999d67c5080fd9749188
+-r--------. 1 u0_a603 u0_a603 2.0K Mar 12 15:20 cd584433de67c2dd99c107eeee90a5693fc092
+-r--------. 1 u0_a603 u0_a603  146 Mar 12 15:20 dd835a6ea700cebab37f5242380ebd379f5612
+total 12K
+-r--------. 1 u0_a603 u0_a603 167 Mar 12 15:20 96540f4a4005bb13c91c7e7d338c0a19f9af19
+-r--------. 1 u0_a603 u0_a603  55 Mar 12 15:20 a4b4b389bf0f9a7ec7c415389e764f0816b668
+-r--------. 1 u0_a603 u0_a603 138 Mar 12 15:20 c26409841546f2a5379349e45efedf04ca5d66
+total 20K
+-r--------. 1 u0_a603 u0_a603  669 Mar 12 15:20 5f3f09b631c225c2beb1c28d7e9295d2c6dfb4
+-r--------. 1 u0_a603 u0_a603 4.0K Mar 12 15:20 6df370c55d2b857ce1c97ff4059f58c225fee4
+-r--------. 1 u0_a603 u0_a603  145 Mar 12 15:20 77af41cc0cea2ab0f28f4efd4ab12de2a6215f
+-r--------. 1 u0_a603 u0_a603 2.9K Mar 12 15:20 94754867816c0b3e751e59fe12672d69e2a2ca
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 9fc6622e38e67e4300571022f4f8f015708c56
+total 12K
+-r--------. 1 u0_a603 u0_a603 3.0K Mar 12 15:20 0c25198d4ff5d53844bb20591f260c7f63db6b
+-r--------. 1 u0_a603 u0_a603   79 Mar 12 15:20 4f7899c01ba8aff1788dabfad667d88426c70d
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 51d2cebfa191c6752017b05f38bc6ae3df001a
+total 8.0K
+-r--------. 1 u0_a603 u0_a603   49 Mar 12 17:25 0751340fae15ee5fd627e1b2d4b524e268e121
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 9bb902fa25db27af54af284b74c237f5f55b0c
+total 16K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 75b6ea3d7dbbd9356d2ef640d7860a3287f4d8
+-r--------. 1 u0_a603 u0_a603  410 Mar 12 15:20 7cd67d4f46a949ae7e88238355f83cd93700e7
+-r--------. 1 u0_a603 u0_a603   61 Mar 12 15:20 b38a8d7e27d15d8ed18401cde44f375bbac25c
+-r--------. 1 u0_a603 u0_a603 3.5K Mar 12 15:20 e08eee8c75e0e7dd5a7a09b6b30bc3143ec7b5
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 89d1f626f644bf63113dc7b270536a8eea560f
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 abfe99c2e6a07ba00bf3c923874b33bda096e0
+total 16K
+-r--------. 1 u0_a603 u0_a603   59 Mar 12 15:20 5c81309298040c2f0fe7841d8a9f0fb02b097e
+-r--------. 1 u0_a603 u0_a603 2.7K Mar 12 15:20 889a2e8a60a1fbd34bf454bce0a778b1f2d3d2
+-r--------. 1 u0_a603 u0_a603 1.4K Mar 12 15:20 b4cae3ada01a367dc8e101d789dd3658dbe282
+-r--------. 1 u0_a603 u0_a603  379 Mar 12 15:20 cb017907210eb96f13bba2d3d4666104907ecd
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 5b084a814839cd10b540c1e50e40838f010bd0
+-r--------. 1 u0_a603 u0_a603 3.4K Mar 12 15:20 9f5e213a7ffa25cb722745a64e8830ba4c0c36
+total 12K
+-r--------. 1 u0_a603 u0_a603 3.9K Mar 12 15:20 17d3b3d7572ea7cd4145b2bd865ad54567ae5b
+-r--------. 1 u0_a603 u0_a603 2.7K Mar 12 15:20 3c25976c56111c4f1fda5e6a9d0dbd4d39dcd4
+-r--------. 1 u0_a603 u0_a603   29 Mar 12 17:25 59470c3179f7b156df5ac24982d7c41b04a0ec
+total 8.0K
+-r--------. 1 u0_a603 u0_a603  58 Mar 12 15:20 84711967a6737b91c72ba379537744d09078bd
+-r--------. 1 u0_a603 u0_a603 641 Mar 12 15:20 f54924d5df30ae86b849cdbf569eb4fd8a63cd
+total 16K
+-r--------. 1 u0_a603 u0_a603  814 Mar 12 15:20 0b752038df0a546c396d5cc6e2a3381225de5a
+-r--------. 1 u0_a603 u0_a603 2.7K Mar 12 15:20 51139087403187bc620433142d21bfc75d0e08
+-r--------. 1 u0_a603 u0_a603   83 Mar 12 15:20 553991e1a178578c5af554d979121028b25678
+-r--------. 1 u0_a603 u0_a603  119 Mar 12 15:20 91f367739778994d5ed32c7a2ae2c66683797f
+total 12K
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 66009fd1c680ff06d7b80581296f51095ce872
+-r--------. 1 u0_a603 u0_a603  196 Mar 12 15:20 85812e099f862b3d70b7c549a9e53b09729cc0
+-r--------. 1 u0_a603 u0_a603   59 Mar 12 15:20 ceb0bc3bb4d6aee19e384636aae8f65a1d11c7
+total 224K
+-r--------. 1 u0_a603 u0_a603 212K Mar 12 15:20 2d44e34de6b647e343ad7e72f08a7eec9169c8
+-r--------. 1 u0_a603 u0_a603 2.9K Mar 12 15:20 4c81b025f7f7e54a5d79d36bac8b0c0eac5ae2
+-r--------. 1 u0_a603 u0_a603 3.7K Mar 12 15:20 54cba276cddf054d495d528b9d034520522378
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 71954cd49ce30a724719042f0868a42ad39532
+total 20K
+-r--------. 1 u0_a603 u0_a603  198 Mar 12 15:20 1984078f52642f98c4044bb75c9ab1631cf4ac
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 356c35a7d129f100255b71fff30656a9b896f6
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 6988c6e2cc3a88f1d3fbfa8e20aa8482b95ee8
+-r--------. 1 u0_a603 u0_a603  113 Mar 12 15:20 925dc76dd9a44fcb871d2a7ed379f9c50b5a3d
+-r--------. 1 u0_a603 u0_a603  350 Mar 12 15:20 c13882326e008a103b1295b61c93b58ebcce10
+total 12K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 16e60decf3d3d5eb3c32577b9380a16a1643e9
+-r--------. 1 u0_a603 u0_a603   47 Mar 12 15:20 6efb18f97b5755928634b15b31f3a3d9a1b8de
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 95148b5d5bd0aa9f516b0fab7c60edbd8ad600
+total 8.0K
+-r--------. 1 u0_a603 u0_a603  821 Mar 12 15:20 5647125a147ff9031c5f9bc98c6147e7b60011
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 94202e022a3748e58608e257d0765dc841ce75
+total 12K
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 01c1e705ab3b38291fae75bbed2fddb26a68bd
+-r--------. 1 u0_a603 u0_a603  119 Mar 12 15:20 0fcc27db947b552a838051e8ff0e3fb1ea3a5e
+-r--------. 1 u0_a603 u0_a603  822 Mar 12 15:20 9b1393bc8aada6fa0a7568fde765a3bad4a4d5
+total 288K
+-r--------. 1 u0_a603 u0_a603  468 Mar 12 15:20 5f65f6a12a0fe7bc56d242fa7442cab4bc85c0
+-r--------. 1 u0_a603 u0_a603  286 Mar 12 15:20 7756f228826135e1e1f1d17fea51daa7471b86
+-r--------. 1 u0_a603 u0_a603 269K Mar 12 15:20 85381ecdcec53bfee974c2092616320d12438a
+-r--------. 1 u0_a603 u0_a603   57 Mar 12 15:20 c75bbe7993bee4c05ee970621492cf1f6abd9d
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 f9bb6d8cd99af2920337c44aa1df2301b42550
+total 8.0K
+-r--------. 1 u0_a603 u0_a603   47 Mar 12 15:20 21df7dd6cc0ed413de825ec60431293f57671c
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 7e6dc3dc5dbea7e24ceb79ce7b1873ae27bf54
+total 16K
+-r--------. 1 u0_a603 u0_a603   62 Mar 12 15:20 085ff8421de9c85cf3a3aa49a8c4e30d1c380f
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 8684256571f6807a8e1d735fb24aa2c66fb217
+-r--------. 1 u0_a603 u0_a603  244 Mar 12 15:20 bc99c4a260da73bb754635da398340f8a3dd89
+-r--------. 1 u0_a603 u0_a603 2.0K Mar 12 15:20 bdb12123c793f53ef341c68db11d01c5b27ef4
+total 8.0K
+-r--------. 1 u0_a603 u0_a603  146 Mar 12 15:20 200554a32d8a82aceb99b43209937695882579
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 a9f86a48b799516f84b1472676ef19ad91e7ac
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 250a7bb5c4c4abf199468c47d66e641c209538
+-r--------. 1 u0_a603 u0_a603   59 Mar 12 15:20 477b0419556b54cc5f45d8550ff8d292958eaf
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 25c4e57e026fd72e8063684fb2f69d24ec60e0
+-r--------. 1 u0_a603 u0_a603   55 Mar 12 15:20 86ab6bf4b193747a04950ade000dc738616903
+total 12K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 4f7baa1a2038a73520245c1e2133c8665efd02
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 69a10f5172ecc4e68dda285d39410ea245b411
+-r--------. 1 u0_a603 u0_a603 3.4K Mar 12 15:20 9dc9bab1763bc7de1e56dfaf185e5481eab83f
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 2bda32601badad4546d5af6176a8a51f54a524
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 6bd9a830f6ae12b6a49bc17ac843ab9d08913d
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 2.7K Mar 12 15:20 802834fb2e08af218cb256d708099a9bc3827c
+-r--------. 1 u0_a603 u0_a603   56 Mar 12 15:20 8a4131a69d5bc52263c76be8ee52ab58afd024
+total 16K
+-r--------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 14a19d228b063dff80bedc8a6c07348284d705
+-r--------. 1 u0_a603 u0_a603   65 Mar 12 15:20 27986fb9935fbad2eedd688e7f2d34de7ba214
+-r--------. 1 u0_a603 u0_a603   57 Mar 12 15:20 28126b659429206107d17f02a684c28f0aa297
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 f6cf6aa94aea380cc26c7e4095daeae183ddaa
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 8e7af07cbfb143e0499ea12c3431fb0fe6943e
+total 8.0K
+-r--------. 1 u0_a603 u0_a603  58 Mar 12 15:20 8ca7e24e790cceab56aa43b7427a9d10520433
+-r--------. 1 u0_a603 u0_a603 210 Mar 12 15:20 e2feb2389ed228f47c5157542307b8dc010684
+total 20K
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 3ad2996ee79c8e858ac6161b8e9f2cad373fe7
+-r--------. 1 u0_a603 u0_a603  664 Mar 12 15:20 5a197ad0e336e966ffd267e6ba2e63b7dc91bd
+-r--------. 1 u0_a603 u0_a603   64 Mar 12 15:20 72960c5bf1fc50c1e2d165ea7c6cc4b13a2ef2
+-r--------. 1 u0_a603 u0_a603   47 Mar 12 15:20 d7468846d180fb51975707ffbb90ddea5fcb86
+-r--------. 1 u0_a603 u0_a603  319 Mar 12 15:20 eaabcba8c40870671e8f323d6adf48f9f01224
+total 12K
+-r--------. 1 u0_a603 u0_a603  58 Mar 12 15:20 22fa1dab7fa9bb9a84714973d42e2ddc800766
+-r--------. 1 u0_a603 u0_a603  57 Mar 12 15:20 9a4157276dcb6bd2480d631bebc1a400a169dd
+-r--------. 1 u0_a603 u0_a603 110 Mar 12 15:20 ad77f9e2733e7725120ce7201d2728040504a2
+total 16K
+-r--------. 1 u0_a603 u0_a603  54 Mar 12 15:20 10f3beb2a9bbdcb205565b58462122741e5973
+-r--------. 1 u0_a603 u0_a603  62 Mar 12 15:20 5e4262b0f38373341c7e9d6e7b50daa8d15a6c
+-r--------. 1 u0_a603 u0_a603 238 Mar 12 15:20 d118ee452ebd64ff47b43227815c7eedfd3af6
+-r--------. 1 u0_a603 u0_a603  65 Mar 12 15:20 e037819a0354f5c40eb91c9278f28218f0a137
+total 12K
+-r--------. 1 u0_a603 u0_a603   46 Mar 12 15:20 0a00b5fca0edcc165b16bd758e00a0d8f44b9c
+-r--------. 1 u0_a603 u0_a603 3.6K Mar 12 15:20 822fc0e76b442b1b15b71e16ed1e15b82935ff
+-r--------. 1 u0_a603 u0_a603  332 Mar 12 15:20 d53197b11a599d6fc42b07bc46957463bc1649
+total 92K
+-r--------. 1 u0_a603 u0_a603 79K Mar 12 15:20 2e4925c5bc7a840e2cc63862cb0004b3b5e0f5
+-r--------. 1 u0_a603 u0_a603 186 Mar 12 15:20 3ae0c4691a442c113f1acbfb63ab6962a5f756
+-r--------. 1 u0_a603 u0_a603  62 Mar 12 15:20 af3405e37e3492ad7748e0a6289842d82999f6
+-r--------. 1 u0_a603 u0_a603 819 Mar 12 15:20 e77f54edc117ddb0b3bec329af85810ecc47f7
+total 8.0K
+-r--------. 1 u0_a603 u0_a603  293 Mar 12 15:20 30667579bc621039ff5c96111e34191f9fc155
+-r--------. 1 u0_a603 u0_a603 3.5K Mar 12 15:20 5d1bf95548154eb67b0751a7e6d8cf94d3ea72
+total 16K
+-r--------. 1 u0_a603 u0_a603 1.3K Mar 12 15:20 5a7eac1dc39f9bde9f5f42ffb174f61fb9665c
+-r--------. 1 u0_a603 u0_a603 3.7K Mar 12 15:20 789458dd474f8bd2c973d5966e860fd7170743
+-r--------. 1 u0_a603 u0_a603  467 Mar 12 15:20 8fae0724721873075e1b53a24c9ee163c953a6
+-r--------. 1 u0_a603 u0_a603 1.8K Mar 12 15:20 f1b24294039d85b8fda30891b8619351707e11
+total 24K
+-r--------. 1 u0_a603 u0_a603   55 Mar 12 15:20 0174c00eb74f4dc482efe2b0710930b7e9dd50
+-r--------. 1 u0_a603 u0_a603   59 Mar 12 15:20 0a560f31526a9cb738d75aef02f95f522337e4
+-r--------. 1 u0_a603 u0_a603   71 Mar 12 15:20 7c24bafca4824694f27d33384c8d43b217d860
+-r--------. 1 u0_a603 u0_a603   56 Mar 12 15:20 9afc907856af7dcbd16d668e8711882d80f7f6
+-r--------. 1 u0_a603 u0_a603   91 Mar 12 15:20 b8c61250e3f3ae9a48bb19f0fdb0a61780b364
+-r--------. 1 u0_a603 u0_a603 4.0K Mar 12 15:20 f6931cddc9ac232def4792f4a48a81cc0f94c6
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 119 Mar 12 17:25 9f3b780824538f64ce148c0e4914ac5c041a1e
+-r--------. 1 u0_a603 u0_a603 947 Mar 12 15:20 df9c8f1ab58d463e5601096bae490c6b0b5f38
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 366 Mar 12 15:20 37746f81d366a52cded8ee855c016c06b252ea
+-r--------. 1 u0_a603 u0_a603 188 Mar 12 15:20 cf2fee88addd955500285db3de0e1ed9883c1f
+total 12K
+-r--------. 1 u0_a603 u0_a603 627 Mar 12 15:20 5dede8eee7adb7baf9f55940588f945ed39ae9
+-r--------. 1 u0_a603 u0_a603  58 Mar 12 15:20 eb956e2ddc41e16083c29564a1ccb11511d9f0
+-r--------. 1 u0_a603 u0_a603 212 Mar 12 15:20 ecc9e8d5e90f684748295b8ae3cbd957e845a6
+total 116K
+-r--------. 1 u0_a603 u0_a603  816 Mar 12 15:20 74e9298cbd4accddd8c5e306149e8114e2095d
+-r--------. 1 u0_a603 u0_a603   62 Mar 12 15:20 d4e26222b270f8d8f40cc5b8cd882f208f02a6
+-r--------. 1 u0_a603 u0_a603 107K Mar 12 15:20 f4f916f4d5f1d44fa2a9cd9ab98349bc9a510e
+total 12K
+-r--------. 1 u0_a603 u0_a603  51 Mar 12 15:20 030429b1b454e2ffeb921fdb9ba7f08e1c4c42
+-r--------. 1 u0_a603 u0_a603 435 Mar 12 15:20 0fabbf103051bfe4cfc1fdec861db363ce97de
+-r--------. 1 u0_a603 u0_a603 476 Mar 12 15:20 3227766c9aad9681b221077ca056a4e019ef28
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 3.1K Mar 12 15:20 2314c77666d6f0d72e2140be5578eea67b7636
+-r--------. 1 u0_a603 u0_a603  251 Mar 12 15:20 b44d151264504fe65d1cdb6920313095d8c2fa
+total 8.0K
+-r--------. 1 u0_a603 u0_a603  113 Mar 12 15:20 7d1de635b9681c2ffbe091a688df63d40d3396
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 e458fd39bb451f959ff3df79ab3556cbb8eeb0
+total 12K
+-r--------. 1 u0_a603 u0_a603 1.8K Mar 12 15:20 215f3f8117aec6114bac43c46613dbac213f33
+-r--------. 1 u0_a603 u0_a603 1.4K Mar 12 15:20 77355b5648edb0d43946c376e55725839be889
+-r--------. 1 u0_a603 u0_a603   92 Mar 12 15:20 df3e980befe61dc6d4a787fe6284b48ca5526b
+total 8.0K
+-r--------. 1 u0_a603 u0_a603  833 Mar 12 15:20 160f8ab9cfd9da91ca1bd727125a987cdf8dec
+-r--------. 1 u0_a603 u0_a603 2.9K Mar 12 15:20 dcee4fe0b7cb01c7eff02500b7a99c067570b1
+total 12K
+-r--------. 1 u0_a603 u0_a603  250 Mar 12 15:20 96ed5cf7f17eb2e2dbea5e377ce8e3bec8eadc
+-r--------. 1 u0_a603 u0_a603 4.0K Mar 12 15:20 c3921b8e985bb07f4a92a47c602d76e8a74ab7
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 d619c26408a42bb8aa969736abeed5009d4f45
+total 12K
+-r--------. 1 u0_a603 u0_a603 3.6K Mar 12 15:20 2d2f95281a3a492c415edcdde06afb635f701a
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 88cd298698e33f58a8a665edb629a9f479e436
+-r--------. 1 u0_a603 u0_a603  306 Mar 12 15:20 e38253d07fd1d91c4eee0b7fad227b6ff1c9bc
+total 16K
+-r--------. 1 u0_a603 u0_a603   65 Mar 12 15:20 2a01c997aac86c59caea6075fe1bc48b24f858
+-r--------. 1 u0_a603 u0_a603   48 Mar 12 15:20 762b3ba512c3470c2b7074be0695c2e35c6fff
+-r--------. 1 u0_a603 u0_a603 3.7K Mar 12 15:20 875fc4a94207f9df8217d6129787a943a37f12
+-r--------. 1 u0_a603 u0_a603 1.4K Mar 12 15:20 c33b7bdb783e5f177783a16cdcd4bcc9fe251a
+total 12K
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 683a229485d79504044da8f3a5f83b3e4ec51f
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 b3077a2a8da83325bfbd8b7416da9f6914e617
+-r--------. 1 u0_a603 u0_a603   57 Mar 12 15:20 cfdd8c3cb09fe601b19c1edd22ecab07b2755f
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 2.4K Mar 12 15:20 8f8e31f0ba99c5e978ff7bc2b47cb315782a5d
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 d78a83363d05bbd1b4216771c669de16ec77b2
+total 12K
+-r--------. 1 u0_a603 u0_a603 3.9K Mar 12 15:20 37da468b8fef293e227740ff8c5bd3d2ae6b88
+-r--------. 1 u0_a603 u0_a603  475 Mar 12 15:20 bd9469a9924440c221a449536cfbf59542f877
+-r--------. 1 u0_a603 u0_a603  108 Mar 12 15:20 c38113c0da39bd92eda0265966c4638963fbc6
+total 20K
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 65e0b4a18ec02f0a54e4e5f067383322c17479
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 97590570ab3c1bc53d523312fb002c530f56a6
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 a62aa564cf5884485bcf6d962bbbd775194ed5
+-r--------. 1 u0_a603 u0_a603   51 Mar 12 15:20 b99f587a458555d3247d3de227762c094050d3
+-r--------. 1 u0_a603 u0_a603 3.9K Mar 12 15:20 ca208c4ce71acd99c0d9b494628bc43c61935e
+total 16K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 1d40c9c27d09013f5b1a2d36912dc7492c4f7f
+-r--------. 1 u0_a603 u0_a603   46 Mar 12 15:20 37b697bd7a35393cc8b8c975fbc27e93618658
+-r--------. 1 u0_a603 u0_a603 1.3K Mar 12 15:20 4cef763ba902f2e5af5ce29b6a66171080e5ee
+-r--------. 1 u0_a603 u0_a603 3.1K Mar 12 15:20 5eba014b705b12b8bda45da0dc150115916df3
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 1.1K Mar 12 15:20 ee557f9bcbf48d0d948863d8ea72eee3424e1b
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 fa0a3708fe868115c573ca4502ec4f917fe38b
+total 20K
+-r--------. 1 u0_a603 u0_a603 1.1K Mar 12 15:20 90f7bffcf44cca5440b66784e540a7dc78c081
+-r--------. 1 u0_a603 u0_a603   46 Mar 12 15:20 b7a16895f2898546a7a5eb76b8a7e93d822c25
+-r--------. 1 u0_a603 u0_a603  346 Mar 12 15:20 c6f0047cf47183cd599ca0638e615d653d892b
+-r--------. 1 u0_a603 u0_a603 4.0K Mar 12 15:20 e4c9b4c87006fd0a1026cb2c0daeec454c2d8b
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 f4611ace4a3596423fba7be58cbf58aa38b519
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 1.1K Mar 12 15:20 145909024d07554e86c506e7cc7e0c2e4d7a97
+-r--------. 1 u0_a603 u0_a603  848 Mar 12 15:20 d4b0e481ff9e0f3209d1a5b10500abeb998eba
+total 16K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 004089668e043b8de8b1730c75453a668b3f7b
+-r--------. 1 u0_a603 u0_a603   64 Mar 12 15:20 4e7c98aa2d4bbb7d4a1c04927b4209fae9dc7e
+-r--------. 1 u0_a603 u0_a603 2.6K Mar 12 15:20 535f0659af1eadc56bf674baf6c942a46004a4
+-r--------. 1 u0_a603 u0_a603   47 Mar 12 15:20 9a64ce01c1c51216a502b301284173bf66c1dd
+total 8.0K
+-r--------. 1 u0_a603 u0_a603  528 Mar 12 15:20 4ee089abe9ce47dbdd20f9d5dae80252dfc928
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 d3d319406921639c18217d46bba37bade865e6
+total 12K
+-r--------. 1 u0_a603 u0_a603 3.8K Mar 12 15:20 4cee6f9143f3625259f0d1e0f9cb745813a268
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 87083e8cca200ea5fe2ad6c9f096d344ef01f3
+-r--------. 1 u0_a603 u0_a603   65 Mar 12 15:20 e01ca7992f185fed3ca74bcb49ca6fbcaab1a0
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 028a8c66c7af6f37b980907737463ee250a33d
+total 12K
+-r--------. 1 u0_a603 u0_a603   48 Mar 12 15:20 1b4bf30eb809228100c9935104b2ba032079b3
+-r--------. 1 u0_a603 u0_a603  127 Mar 12 17:25 a6b0bd97dc3a5a5a817a0d7b16cf21981c7d5b
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 ee5b52f942241aa3225b69b7b781845a9c1c8d
+total 16K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 1aa8c5bce055342da39880a2ada917cb56be22
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 1c3c6e8a3a36cde6a878d921217951d503112b
+-r--------. 1 u0_a603 u0_a603  138 Mar 12 15:20 917d57ff989b8251fc97cb351c7aa0eb2408f9
+-r--------. 1 u0_a603 u0_a603   71 Mar 12 15:20 f8a4507a470d41b5f53725e884efe460b37dfa
+total 24K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 0f8bf05003fa9569b18c6254690e73b7a97c54
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 2a1ef295305adb27c7c86881486ccf243ba851
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 67a6d37b19c453b3f5c521a3d1b869c61929d1
+-r--------. 1 u0_a603 u0_a603   49 Mar 12 15:20 9c66403cbf9c73b0155ec965bbfb18bc2b4cb2
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 ae0d4ff8b9841025e6ac046a92968c81887f8a
+-r--------. 1 u0_a603 u0_a603   63 Mar 12 15:20 f589bad96967d2e09f315afad8184b11e6ca0f
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 246 Mar 12 15:20 87f3b0e6b8a94b0aa7a90ce4ddc149dd4b6572
+-r--------. 1 u0_a603 u0_a603 591 Mar 12 15:20 f9e6089e8aa2f99ac562f6396edad09cade092
+total 8.0K
+-r--------. 1 u0_a603 u0_a603  402 Mar 12 15:20 0d37c18eaea8a4921e8f8d8eb9b514d424f725
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 744aa8d690d096e5ac509f53cd1062d272b238
+total 12K
+-r--------. 1 u0_a603 u0_a603  215 Mar 12 15:20 8c5827373ca09440d42788dd8f9926e281d58c
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 8c8f6974d1060526c2ceb45f292f66bcd57321
+-r--------. 1 u0_a603 u0_a603  419 Mar 12 15:20 f7aada013a72edc424032f7d4e7e5f24a56062
+total 8.0K
+-r--------. 1 u0_a603 u0_a603  73 Mar 12 15:20 ec5ceca2de95bccd9c5abec02d4edd24902558
+-r--------. 1 u0_a603 u0_a603 248 Mar 12 15:20 f76a3cbb1058e3a5d217e5ec7c3d0d389e263a
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 3.9K Mar 12 15:20 c853cd121d9eebcc94bf99e96689ed14978c95
+total 52K
+-r--------. 1 u0_a603 u0_a603   59 Mar 12 15:20 55f77952c8aa7552bc24b9080612270870dc8b
+-r--------. 1 u0_a603 u0_a603  44K Mar 12 15:20 97cfc60f4cff0e7451d19d49a82fa986695d07
+-r--------. 1 u0_a603 u0_a603 3.8K Mar 12 15:20 ea787cfa1f316f75ba6b3588ce34c2bb1d454e
+total 12K
+-r--------. 1 u0_a603 u0_a603  347 Mar 12 15:20 2d51e4cd77b010309e6b1f1f32948e1c75af36
+-r--------. 1 u0_a603 u0_a603  264 Mar 12 15:20 45c9cf2f5852b927e51a224bcd38cbb524c2c4
+-r--------. 1 u0_a603 u0_a603 3.1K Mar 12 15:20 fd44c16d6eee7d1c655b52296200d8a5ce68df
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 4fbdfe7f65bd76754709a9f75576abe62ea796
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 3.4K Mar 12 15:20 6527db4c2bf38a1ea23fbacaa7f68581b1a7a8
+-r--------. 1 u0_a603 u0_a603 3.8K Mar 12 15:20 bafc3ba33f4bdf45bff754b98591186c52e184
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 3.8K Mar 12 15:20 373456183de3a77a9dd82f5fe6109e1357d7df
+-r--------. 1 u0_a603 u0_a603 3.4K Mar 12 15:20 c70db3b681d11eacec7c5c0914fe5f571b301f
+total 28K
+-r--------. 1 u0_a603 u0_a603   47 Mar 12 15:20 0a6b477002bd1696ed6d1bf9db86c4f886b774
+-r--------. 1 u0_a603 u0_a603  330 Mar 12 15:20 0b7fde9eff1ac061d629c9e72e64d6f3f63042
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 514da5292118e9f46a7dfddccae87ff8dfbfb4
+-r--------. 1 u0_a603 u0_a603 3.7K Mar 12 15:20 59245d18e6e9fdb9c84b9abe62465e66944549
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 80404f38331448867fc91a4121bd5a6aa71abf
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 a91566abc3218bd14487930a3974452a990893
+-r--------. 1 u0_a603 u0_a603   47 Mar 12 15:20 f24d7c79d20920abc2bdb289202e7c6a6be7c4
+total 12K
+-r--------. 1 u0_a603 u0_a603 1.3K Mar 12 15:20 5649c90718154d706fe6c7deeca9a8f58c435d
+-r--------. 1 u0_a603 u0_a603  202 Mar 12 17:25 730a0dcfc6b2945e4e31571afcd7879d88e149
+-r--------. 1 u0_a603 u0_a603   48 Mar 12 15:20 a856e5476a1391925fca34b3036129fe9b16a0
+total 20K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 091a806e65658c299ec42d9e886cb7d1bef63f
+-r--------. 1 u0_a603 u0_a603  590 Mar 12 15:20 4ceff60ca8785430399110a50c2a2c4a2f2b7d
+-r--------. 1 u0_a603 u0_a603   93 Mar 12 15:20 765da381361cd8a568fc79f6292c93a2d9c89d
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 7ad01653316b6bb8a487f5509e2b23499ee895
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 ddaeade71f06b8cd9d3e805391f6422cb8a4f5
+total 20K
+-r--------. 1 u0_a603 u0_a603   64 Mar 12 15:20 0c3d76e376c5fa1d080e59f1d2d759ab36944c
+-r--------. 1 u0_a603 u0_a603  320 Mar 12 15:20 0f848c293ee868e1ccf89e516e5322dbc88d7f
+-r--------. 1 u0_a603 u0_a603  127 Mar 12 15:20 42f75ba69de9a3861e7ef831dec394624e6706
+-r--------. 1 u0_a603 u0_a603  268 Mar 12 15:20 da59e8ff09e021829eb75848042b79b2fb63ec
+-r--------. 1 u0_a603 u0_a603 1.5K Mar 12 15:20 dc54aab6c5f3288cf73b5ea545b4e5fc569f4d
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 307 Mar 12 15:20 c77949283f32252728b5f1499061c0087d43af
+total 12K
+-r--------. 1 u0_a603 u0_a603   55 Mar 12 15:20 2122430c3147cbc0d05bdb294751c634ab0dc8
+-r--------. 1 u0_a603 u0_a603 3.8K Mar 12 15:20 5f0c6972aaafefbceb8d1e0ee254219ce64499
+-r--------. 1 u0_a603 u0_a603   62 Mar 12 15:20 eebcaa2d941befeeb8668aab72d718dad9fad8
+total 8.0K
+-r--------. 1 u0_a603 u0_a603   61 Mar 12 15:20 821c9499c67f4c44ddb14e3d4d5c0abd214cde
+-r--------. 1 u0_a603 u0_a603 3.4K Mar 12 15:20 c9de61980d8ec785d012dc1b95497eb791c6f0
+total 12K
+-r--------. 1 u0_a603 u0_a603   45 Mar 12 15:20 4c62e6704d03046af853751d7ca31644bb1c9a
+-r--------. 1 u0_a603 u0_a603 3.8K Mar 12 15:20 4e759180bd58d774430bd801f6cc5fef877918
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 61de88ec308954eb961e56052b2ceacd3febf0
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 4.2K Mar 12 15:20 764343d79ffaec76e2020034c1f9fe22e39adc
+total 12K
+-r--------. 1 u0_a603 u0_a603 3.7K Mar 12 15:20 997df434fff1167963b5e0b915bd9fcbe8825d
+-r--------. 1 u0_a603 u0_a603   48 Mar 12 15:20 c7785830fc9e2dbf5e35737fd945e2aa5650a9
+-r--------. 1 u0_a603 u0_a603   93 Mar 12 17:25 fa83893a2bcb3b33341099d500fb6eefa26add
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 3.9K Mar 12 15:20 1a92a397fd4ae7aa45fa580663fd9f0fa87b0a
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 6fc44b08ca305c8bf14038271c0a0900458863
+total 16K
+-r--------. 1 u0_a603 u0_a603 4.1K Mar 12 15:20 8b41f451b8d1a3ad5d2a616753c35fe91aa5cd
+-r--------. 1 u0_a603 u0_a603   71 Mar 12 15:20 c6e97cd40fa545888f5fd0696908726f464ce3
+-r--------. 1 u0_a603 u0_a603   55 Mar 12 15:20 cb65fcf507665c589ed0a172c9eb4f19921a61
+total 16K
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 0b5db233735b70270d10b67b7933c69414397b
+-r--------. 1 u0_a603 u0_a603   71 Mar 12 15:20 68cfcf5686f129ebc0c6df73073274d429414b
+-r--------. 1 u0_a603 u0_a603  382 Mar 12 15:20 6937fa0354c0db848afbc61958b011833f06c5
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 7ec4fcdc4d53b3885fc793c8aca46ce15f93a6
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 3.5K Mar 12 15:20 42af98fdd1046343eae79f755b2a371fedff93
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 b4392327e6d84042e5a3377254d4de2abbdddc
+total 20K
+-r--------. 1 u0_a603 u0_a603   57 Mar 12 15:20 46d9caece76d564007d4f46be89ffd2d1409a5
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 59a975cde618124c6491e472023f0078ca9c48
+-r--------. 1 u0_a603 u0_a603 3.8K Mar 12 15:20 6d7d461abee38a93a60c39e6e3c15bb831de2c
+-r--------. 1 u0_a603 u0_a603   62 Mar 12 15:20 86e08cd8144fecef8672f29eaf77536539de2a
+-r--------. 1 u0_a603 u0_a603   49 Mar 12 15:20 a0b83d661e98d8b2c73205702f607ef49f9781
+total 16K
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 1eaf0e1b2a9d816d773f21837f17e3342dd384
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 2d7b658879ff0b0f8d3a2f8c51e9a7af609ddc
+-r--------. 1 u0_a603 u0_a603  417 Mar 12 15:20 411240036d06399d241417c75fac94a6020285
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 8c1810b7f393d8c0d1006276fc7c0fc6878e28
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 1.3K Mar 12 15:20 09b2dd8fe5579a5954a2c28633ad914cd1c225
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 e6a1b934ec8ebb5291d855e79e1925ae26aa40
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 3.8K Mar 12 15:20 7fec5864b7bd9258c27f5162a479dcf52eb423
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 dad1cd330f249e264a01fe72cd41870cd6fab8
+total 16K
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 1624fab57c552eb4b895e237c61fc0512d0707
+-r--------. 1 u0_a603 u0_a603   78 Mar 12 15:20 3bed765c5342a4ef1c9f83ceb563be604855df
+-r--------. 1 u0_a603 u0_a603 3.4K Mar 12 15:20 8f76c3fa99abe7b331e7c260cf3dfe384f0e50
+-r--------. 1 u0_a603 u0_a603 1.7K Mar 12 15:20 ced8067dc503a84df8266d61bd01b45fb8e196
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 3.3K Mar 12 15:20 a02268ce8ca6fc428bca636f0a63100ccdf8f0
+-r--------. 1 u0_a603 u0_a603   77 Mar 12 15:20 e68c5e2243901ddb32a4d10decefac6b260e92
+total 16K
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 555946d830cf7e9c3ff247870786bb4db667af
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 5cf8be2356135df888832290068a6c2314f7a1
+-r--------. 1 u0_a603 u0_a603   47 Mar 12 15:20 f4886c76e80755fc55f82f49a83ad8b8943597
+-r--------. 1 u0_a603 u0_a603  282 Mar 12 15:20 f6eaae517f95a5948bb11756f94614d9f15db6
+total 20K
+-r--------. 1 u0_a603 u0_a603   57 Mar 12 15:20 2937445f1cccb52901e74615db788daeff771b
+-r--------. 1 u0_a603 u0_a603  109 Mar 12 15:20 3acece7ee2ad592dbeb03c284740986745adb7
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 45cd1ae4da83d56562a367ecfe9479ddeb15b6
+-r--------. 1 u0_a603 u0_a603   71 Mar 12 15:20 7300e452f29559afba8001cb0db6e48971d0ce
+-r--------. 1 u0_a603 u0_a603 3.7K Mar 12 15:20 e3eda02016cce2ace2a0d1a7921bd7dffa507c
+total 12K
+-r--------. 1 u0_a603 u0_a603 1.1K Mar 12 15:20 64f7054564162fb82c14e9fe0ac513d15e8e3c
+-r--------. 1 u0_a603 u0_a603 4.1K Mar 12 15:20 dee20f52b97fd10cbb71d3fa34d7303d974b01
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 2538a659c3a54c843515afa386aa29460c2397
+-r--------. 1 u0_a603 u0_a603 2.0K Mar 12 15:20 74a32e8344bf9e2284d7c21f5dfa2a91a2644b
+total 12K
+-r--------. 1 u0_a603 u0_a603 9.1K Mar 12 15:20 a126a8b1147a27fd0c73d4f9944e5cd4a118ba
+total 60K
+-r--------. 1 u0_a603 u0_a603 378 Mar 12 15:20 45b61bcdf5dbddaf2f50576ca99842f2619a1e
+-r--------. 1 u0_a603 u0_a603 46K Mar 12 15:20 661af0b753c47f2bc638e1fb9975ba3f1ccde0
+-r--------. 1 u0_a603 u0_a603 440 Mar 12 15:20 723dcd59e2ed695480d829d0b0c5f84ff46020
+-r--------. 1 u0_a603 u0_a603 343 Mar 12 15:20 90d7c552d60e4ca68d613f409ffa0fe8778173
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 651 Mar 12 15:20 6981eb4daeb074bb26ccb2e66b18c45e3b5099
+-r--------. 1 u0_a603 u0_a603  58 Mar 12 15:20 f548ac304ece31e47258a9b0439a39ed2629b9
+total 12K
+-r--------. 1 u0_a603 u0_a603 2.0K Mar 12 15:20 03071f2b811be284ebf656811868945626bcdb
+-r--------. 1 u0_a603 u0_a603  736 Mar 12 15:20 7c7c1fbd48302aaa9132f7b77c5813ee81bd5a
+-r--------. 1 u0_a603 u0_a603 2.0K Mar 12 15:20 d880ee27bdd3a112da21da002ffeda4e42246f
+total 8.0K
+-r--------. 1 u0_a603 u0_a603  173 Mar 12 15:20 9f2a56c3b94d7b6ebc1591c92e32d35895e2c1
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 bcd32789dd6fd7b38b87bd7596ea244a776436
+total 20K
+-r--------. 1 u0_a603 u0_a603 3.4K Mar 12 15:20 037146f83c874d3cbdb1114572d6557a002248
+-r--------. 1 u0_a603 u0_a603   47 Mar 12 15:20 42f6b434ccad2d4b58b63223d8020182fd4f47
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 570c921142d2fc3b77261c6d71620e227e11f4
+-r--------. 1 u0_a603 u0_a603   45 Mar 12 15:20 5ccc0e386852782e69e780fad16c0c0ded1be0
+-r--------. 1 u0_a603 u0_a603   59 Mar 12 15:20 a40c46d20148e11602635cdfdd6bea00b50950
+total 12K
+-r--------. 1 u0_a603 u0_a603 369 Mar 12 15:20 22b2a5ee99801ad2a691769e98bc5b2eec82d5
+-r--------. 1 u0_a603 u0_a603  58 Mar 12 15:20 54cf8854cfb776ca5d18d7c266afafe00fa3f3
+-r--------. 1 u0_a603 u0_a603  60 Mar 12 15:20 f5d80f562cfb5b407c298d416d247d9ee88236
+total 12K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 08dfde5c459abf120ddd776bc7029ee8ef9ba8
+-r--------. 1 u0_a603 u0_a603   47 Mar 12 15:20 15b44c6fba4051db5c79b5feb183329e1eb38f
+-r--------. 1 u0_a603 u0_a603  320 Mar 12 15:20 1bd9fbe153df37ff8b53d19caceb3988b4a71c
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 6abe060a4925e8bf4051ecba1517a73a59ee2e
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 5fd2a7f611c469de72b08c4b8fdabed16ba001
+total 264K
+-r--------. 1 u0_a603 u0_a603 212K Mar 12 15:20 4c71577008b23c68d800666eeb2721f31409f6
+-r--------. 1 u0_a603 u0_a603  314 Mar 12 15:20 85433e74b8e3d01a8eec96dc18eba6452e4637
+-r--------. 1 u0_a603 u0_a603  46K Mar 12 17:25 f313938236ac5fd69fdc7fb37fdc35dc7bab90
+total 12K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 7a00a852b7fbce63764f2fe7ac7cf966b1dc81
+-r--------. 1 u0_a603 u0_a603   47 Mar 12 15:20 9ea6d3b7f710adbc4a5c3680506643c5fdde53
+-r--------. 1 u0_a603 u0_a603   28 Mar 12 17:25 fa4faabd97e0b4b4c98e23946797f104b2b9eb
+total 12K
+-r--------. 1 u0_a603 u0_a603  122 Mar 12 15:20 13b51ee3681379023cd0ad383e245c3a2e404d
+-r--------. 1 u0_a603 u0_a603  250 Mar 12 15:20 1bbcf822fc7def1b3d03f12dc0a669bc02c92c
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 708946f43f8b2355b759ef573e0b2fe8334621
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 40c0329e336c32719fcbc01ddfafe4dcf39ed6
+-r--------. 1 u0_a603 u0_a603   62 Mar 12 15:20 eee86921bdca828abe4b6a72b9d278acad1a9b
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 15802d1d4b1ce937dff4acf53fd7262ce44642
+-r--------. 1 u0_a603 u0_a603  247 Mar 12 15:20 ff1f14c981f191beb6bb9cc05412eef9c63490
+total 12K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 26747210fa3fda61d30d0180991f7c0ea1e57b
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 a041e7611b71f2ef26f079b86e55e2f69a54e7
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 f3ce3e9ebc2b51c0ee7928ea8ab11933c2f6b7
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 a5e7de01525bdc8e6331099e6b7d12e55549db
+total 8.0K
+-r--------. 1 u0_a603 u0_a603  93 Mar 12 15:20 8257b223d116c27a69fb13ebedf73ecbc813ef
+-r--------. 1 u0_a603 u0_a603 392 Mar 12 15:20 867936edd770564ac19e2b727d82a102cfb3f9
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 319 Mar 12 15:20 bb73ecf5a590b13c07a16be9b5a0a872cb7bf8
+total 16K
+-r--------. 1 u0_a603 u0_a603  55 Mar 12 15:20 42aaa56dfc1e37100f1e1841577855d1cc053a
+-r--------. 1 u0_a603 u0_a603 314 Mar 12 15:20 7d2fcd56b792bc82ad205657fa115d3f4abb82
+-r--------. 1 u0_a603 u0_a603  58 Mar 12 15:20 92574805446f9ee89861718444ec0b542ac1b4
+-r--------. 1 u0_a603 u0_a603 361 Mar 12 15:20 f4bb4fc25948c598a0fdd8bf89b7a63d266634
+total 12K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 5a5557682ce5c999ee9fa453c148e319d680e5
+-r--------. 1 u0_a603 u0_a603   87 Mar 12 15:20 7b7608b8d18150b7426d6f55cec9fe077cc0e2
+-r--------. 1 u0_a603 u0_a603  318 Mar 12 15:20 aba2b1616b1876a7b02588b00129c85c48354e
+total 8.0K
+-r--------. 1 u0_a603 u0_a603   57 Mar 12 15:20 ac3cc0773507089da24ad4755e2e6ec158412e
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 ccd47bbf1da0b28517b3fc3e80850abd074a45
+total 12K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 1f4ebc3343db8e8116246de07a9bc2cc9a9ef9
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 f66db2a6359aad05d72d65289ea6b21050a581
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 feb78f0b75cf03e37ad4bc5435da9110255a04
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 0e145b00f40ee8185ccabce17b24b16bd51251
+-r--------. 1 u0_a603 u0_a603  343 Mar 12 15:20 9e852ca338fd1126599cdfe3cfb940904919d2
+total 12K
+-r--------. 1 u0_a603 u0_a603   62 Mar 12 15:20 47ed08e0ae4759ce8c3f1314f84e66840833d5
+-r--------. 1 u0_a603 u0_a603   70 Mar 12 15:20 cb55fab93aaf0e35b7c0f5ed6feb7980e378c9
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 dae30549bf54f32acd06dc8ca2445ad687bc60
+total 12K
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 1a5dd579cd69e7f88ef997d6401a6e304ba3fb
+-r--------. 1 u0_a603 u0_a603  122 Mar 12 17:25 39e3470234316bc4e11be303455d0010dd6feb
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 c437f02c6cd9dfdd9c51cd7474cde8ab95ac69
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 2.0K Mar 12 15:20 2ffd17353e371b716d4f82324f929feef05640
+-r--------. 1 u0_a603 u0_a603  326 Mar 12 15:20 d3fd553d2a8207d80aa2cec6be50ff77dba9e9
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 093445d7e288699b660d4b9ce20d2b5bde0ed9
+-r--------. 1 u0_a603 u0_a603   67 Mar 12 15:20 3be4c133dde160600692af368e549c15faa0ee
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 6fca56615633b60f6fb4c73145d8475e7134e4
+-r--------. 1 u0_a603 u0_a603  112 Mar 12 15:20 bce94c61b7266ada1c4f7f27d54cfbd2111408
+total 8.0K
+-r--------. 1 u0_a603 u0_a603   82 Mar 12 15:20 79aa31e5583370b09642e08b2ceee3e56dd847
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 c001c0dfb9637326b45506fe2bfe088cd1f51d
+total 8.0K
+-r--------. 1 u0_a603 u0_a603   77 Mar 12 15:20 039368861c61c33d7d49529f99d5474515ff9c
+-r--------. 1 u0_a603 u0_a603 2.0K Mar 12 15:20 4e917725a24d8577ebe7510f4efd9c691bd9fa
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 5ae83aa213052854f94ecfaff09c2f199343ba
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 307 Mar 12 15:20 9d0516a6cc99ff13dabf9c2ca0e1b5e25f4007
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 edd92ef701141db1653256074ae749cd207b3c
+total 24K
+-r--------. 1 u0_a603 u0_a603  346 Mar 12 15:20 195905e46ce870f3434b6c1a3a975d790d5c8e
+-r--------. 1 u0_a603 u0_a603   70 Mar 12 15:20 4295d395ce7976139cde717f2973ba6429243e
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 4adc1c2144ad0f278f296be81cdc42febafee3
+-r--------. 1 u0_a603 u0_a603  854 Mar 12 15:20 6b1203e7f582974b5c3a8770922cfe951dfada
+-r--------. 1 u0_a603 u0_a603   71 Mar 12 15:20 958ab354a4520033f1174eaf6b8bd9072f0729
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 bd5ae87a00190abd8a5fe569eb10518d84266e
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 fdc5ed71cd68864e99408de5e980a0e22a4fd6
+total 12K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 0cf2484a4ae541a811fa935ab53c4fdf0b209f
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 7960193da0a82a2ec2daf02faf317852325de3
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 f8bf3c8961e9ace079f05ada91c205f8fd17d5
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 5bc556c95bac944460eb82bbd855960ae801e9
+total 20K
+-r--------. 1 u0_a603 u0_a603 14K Mar 12 17:25 3e519756f8df068438852b29a8779f1cee845d
+-r--------. 1 u0_a603 u0_a603 368 Mar 12 15:20 bf446600f495a960afa9f8d5cb554715f29042
+total 56K
+-r--------. 1 u0_a603 u0_a603 50K Mar 12 17:25 31cc24c4afce07f99d700c2efd0d042dd18f1d
+-r--------. 1 u0_a603 u0_a603 342 Mar 12 15:20 b04f446e6b71409e8112bab708e91380cd97c1
+total 12K
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 2e7d9e618679b3c92d24bbad79a060777321b1
+-r--------. 1 u0_a603 u0_a603   17 Mar 12 15:20 37a088a01e8ddab3bf3fa98dbe804cbde1a0dc
+-r--------. 1 u0_a603 u0_a603 2.1K Mar 12 15:20 3e0aaaa5a9734d0ad2fac5629751de5b55a947
+total 92K
+-r--------. 1 u0_a603 u0_a603  58 Mar 12 15:20 10b222351ea96a39c2f56110bd0888933bafd2
+-r--------. 1 u0_a603 u0_a603  64 Mar 12 15:20 8a7b4fbd0de0d6a6802dc46b655cbd91eaf687
+-r--------. 1 u0_a603 u0_a603 79K Mar 12 15:20 d99ca6f0dd675c8a8d8cc5e6fdd228b660e707
+-r--------. 1 u0_a603 u0_a603  47 Mar 12 15:20 eab9dc12ef2ba55319c62e21d1107662d4a3bd
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 79 Mar 12 15:20 5651cb48ccc12585dc7624cb79e20999a84d69
+-r--------. 1 u0_a603 u0_a603 70 Mar 12 15:20 602fffc24e0ddcf3c9f6e78be76cf654162ade
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 3.9K Mar 12 15:20 62dcbd52b47f76369ae43bd0e5e5e13fc06c85
+total 284K
+-r--------. 1 u0_a603 u0_a603   78 Mar 12 15:20 30c68ccd5e9a6397bb32ff71a247007286fce6
+-r--------. 1 u0_a603 u0_a603 269K Mar 12 15:20 5124a7cbff10be5121c90c131081937ad4f939
+-r--------. 1 u0_a603 u0_a603   55 Mar 12 15:20 62202724e5f3deaf5ed55dfc8e3aca38c0b66f
+-r--------. 1 u0_a603 u0_a603  115 Mar 12 15:20 7ab4c27563aebbca3447e0ae7daada4e66286a
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 57 Mar 12 15:20 55a8ecfb7e3173a620e7baf66dbc272ec6ff1e
+-r--------. 1 u0_a603 u0_a603 65 Mar 12 15:20 8e401386360dbb543dc47029b69a286b340705
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 59 Mar 12 15:20 025e1d062b1840a2a9fc256b94cae275ef75f9
+-r--------. 1 u0_a603 u0_a603 57 Mar 12 15:20 255e8dbb3078944bbd8413be33e4ba8c2fdf98
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 60 Mar 12 15:20 ddb9e78f9062ce0691b4119690a9b3d239bfdd
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 57 Mar 12 15:20 c5bc137e8b8a3dde35e963f1d072babf0e5d86
+total 12K
+-r--------. 1 u0_a603 u0_a603 29 Mar 12 17:25 90010e8b7a0db75b3b74aac3433593fc92abcc
+-r--------. 1 u0_a603 u0_a603 58 Mar 12 15:20 bb25a2f2e5aedc707b54fd6e43806dbcb653da
+-r--------. 1 u0_a603 u0_a603 58 Mar 12 15:20 eed3a42618961d2ab2a54ad43020448adb815e
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 62 Mar 12 15:20 ddff08193053ee62fbe502edd11dea2a0996a0
+total 8.0K
+-r--------. 1 u0_a603 u0_a603   58 Mar 12 15:20 0a86c717580fe9b6df0e1d9b0b26729727b5f6
+-r--------. 1 u0_a603 u0_a603 3.1K Mar 12 15:20 4966406f76971643a9bf19b9e87c6a59fe45ba
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 58 Mar 12 15:20 318190451e828a0e0a37cab0ee5a30c79e3c2f
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 145 Mar 12 15:20 21c4d20345dbf1ca1b8ef8d22f41ca2716d7ce
+-r--------. 1 u0_a603 u0_a603  48 Mar 12 15:20 b1c00b0c70862a9d9f4f019584a5e030c2366f
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 590 Mar 12 15:20 0ca8943b10f330b85e35ed756cc871e230dc66
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 96 Mar 12 15:20 9d3d6b024a39cf2fe5a2eb2e1461fdcc8599ad
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 152 Mar 12 15:20 db1ebc32c11c4679a7129c4cd83dd26042cf81
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 3.2K Mar 12 15:20 c95d278e32bfa6b1e76a373498893044e3fd47
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 61 Mar 12 15:20 ccace4f518094fadf5f81b22ce7d20737ddb9f
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 198 Mar 12 17:25 429f196cbd0456f1e33482cdfb9b061d0314c5
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 252 Mar 12 15:20 725bd1ada599ed27ef904c35e8029c246b35bf
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 171 Mar 12 15:20 c3ce4a040fbaca00399f5957709871c2086d7e
+total 12K
+-r--------. 1 u0_a603 u0_a603 248 Mar 12 15:20 012f40babb88d55f08659577ea98250197e0a8
+-r--------. 1 u0_a603 u0_a603 169 Mar 12 15:20 3828fd21094213784573c00b760a988425be3c
+-r--------. 1 u0_a603 u0_a603  58 Mar 12 15:20 c87369bf48fc835534e6626440ba546e435f51
+total 8.0K
+-r--------. 1 u0_a603 u0_a603  61 Mar 12 15:20 4c046fdab414b24fbd5c41df6f26add8aa16cf
+-r--------. 1 u0_a603 u0_a603 488 Mar 12 15:20 96dc8df5279a4f7b1b72acb9f546fe7503761d
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 58 Mar 12 17:25 7d90cc85a313b1125333af3b34d12ef4f1d28e
+-r--------. 1 u0_a603 u0_a603 47 Mar 12 15:20 e4f56b0630076eda9028ffa7b72e866d6538af
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 58 Mar 12 15:20 3375fcfb62a266c23a24e82add6c72c7db404c
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 58 Mar 12 15:20 c50dce10577e0b9aecf1032b800c07834f6a8c
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 58 Mar 12 15:20 c5628f4bb80a3325486c38d1c6d87d350ade0f
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 65 Mar 12 15:20 76d47c7dc43a47f63041849b063a90cd88d129
+total 8.0K
+-r--------. 1 u0_a603 u0_a603  58 Mar 12 15:20 2512010f9e27e826f556b693ef22b85e0c60be
+-r--------. 1 u0_a603 u0_a603 122 Mar 12 15:20 988de3469d9996e4f50ac601542a554a082b47
+total 12K
+-r--------. 1 u0_a603 u0_a603  58 Mar 12 15:20 7e03b6057cfdb0688e1cfbfab63291759dc2af
+-r--------. 1 u0_a603 u0_a603  83 Mar 12 15:20 8b1def187d2f75870ec42dd442d604ce259097
+-r--------. 1 u0_a603 u0_a603 193 Mar 12 17:25 dc3886db6c849885ba5cc9cd9abffdac6bc6f3
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 58 Mar 12 15:20 30e58d5143d54d79309ffc964c0b4f18cb3859
+total 8.0K
+-r--------. 1 u0_a603 u0_a603  60 Mar 12 15:20 9fd12915e61e6ecd9d46f778aa551032b147d4
+-r--------. 1 u0_a603 u0_a603 476 Mar 12 17:25 bb2fb32ba609b6c537c4d23df14a3a9b10dd7c
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 59 Mar 12 15:20 d751dfefb364356d53028341a35c2e63c055a6
+total 8.0K
+-r--------. 1 u0_a603 u0_a603 109 Mar 12 15:20 077964760a5d5250df957f6ef7f066f9399f50
+-r--------. 1 u0_a603 u0_a603  48 Mar 12 15:20 ec61cab91a8d9dbdbeff6d05e6b683416d1e21
+total 4.0K
+-r--------. 1 u0_a603 u0_a603 47 Mar 12 15:20 0bab5e47342e816b02f45081d11c26feedc3d5
+-rw-------. 1 u0_a603 u0_a603 21 Mar 12 15:22 ./.git/HEAD
+-rw-------. 1 u0_a603 u0_a603 44 Mar 12 17:25 ./.git/COMMIT_EDITMSG
+-rw-------. 1 u0_a603 u0_a603 141K Mar 12 17:25 ./.git/index
+-rw-------. 1 u0_a603 u0_a603 111 Mar 12 16:16 ./.git/FETCH_HEAD
+total 7.5K
+-rw-------. 1 u0_a603 u0_a603 1.2K Mar 12 17:25 HEAD
+drwx------. 4 u0_a603 u0_a603 3.4K Mar 12 15:48 refs
+-rw-------. 1 u0_a603 u0_a603 1.2K Mar 12 17:25 ./.git/logs/HEAD
+total 7.0K
+drwx------. 2 u0_a603 u0_a603 3.4K Mar 12 15:22 heads
+drwx------. 3 u0_a603 u0_a603 3.4K Mar 12 15:48 remotes
+-rw-------. 1 u0_a603 u0_a603 41 Mar 12 16:16 ./.git/ORIG_HEAD
+-rwx------. 1 u0_a603 u0_a603 942 Mar 12 17:17 ./configurar_gradle_termux.sh
+-rwx------. 1 u0_a603 u0_a603 2.0K Mar 12 17:44 ./descrever_projeto.sh
+-rw-------. 1 u0_a603 u0_a603 88K Mar 12 17:45 ./resumo_projeto.txt
+
+>> Scripts shell (.sh) encontrados:
+-rwx------. 1 u0_a603 u0_a603 1.3K Mar 12 15:01 ./corrigir_manifest_leitor.sh
+-rwx------. 1 u0_a603 u0_a603 5.3K Mar 12 15:14 ./instalar_leitor_universal_completo.sh
+-rwx------. 1 u0_a603 u0_a603 942 Mar 12 17:17 ./configurar_gradle_termux.sh
+-rwx------. 1 u0_a603 u0_a603 2.0K Mar 12 17:44 ./descrever_projeto.sh
+
+>> Arquivos Gradle (.gradle e gradlew):
+-rw-------. 1 u0_a603 u0_a603 766 Mar 12 14:30 ./app/build.gradle
+-rw-------. 1 u0_a603 u0_a603 54 Mar 12 14:30 ./settings.gradle
+-rw-------. 1 u0_a603 u0_a603 357 Mar 12 17:22 ./build.gradle
+-rwxr-xr-x. 1 u0_a603 u0_a603 8.5K Mar 12 14:31 ./gradlew
+-rw-------. 1 u0_a603 u0_a603 2.9K Mar 12 14:31 ./gradlew.bat
+-rw-------. 1 u0_a603 u0_a603 586 Mar 12 15:15 ./LeitorUniversalIA/app/build.gradle
+-rw-------. 1 u0_a603 u0_a603 54 Mar 12 15:15 ./LeitorUniversalIA/settings.gradle
+-rw-------. 1 u0_a603 u0_a603 357 Mar 12 15:15 ./LeitorUniversalIA/build.gradle
+-rwxr-xr-x. 1 u0_a603 u0_a603 8.5K Mar 12 15:15 ./LeitorUniversalIA/gradlew
+-rw-------. 1 u0_a603 u0_a603 2.9K Mar 12 15:15 ./LeitorUniversalIA/gradlew.bat
+
+>> Arquivos de configuração (.properties, .yml, .yaml, settings.gradle):
+-rw-------. 1 u0_a603 u0_a603 212 Mar 12 14:32 ./app/build/intermediates/incremental/debug/mergeDebugResources/compile-file-map.properties
+-rw-------. 1 u0_a603 u0_a603 208 Mar 12 14:32 ./app/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+-rw-------. 1 u0_a603 u0_a603 56 Mar 12 15:05 ./app/build/intermediates/app_metadata/debug/app-metadata.properties
+-rw-------. 1 u0_a603 u0_a603 54 Mar 12 14:30 ./settings.gradle
+-rw-------. 1 u0_a603 u0_a603 109 Mar 12 14:30 ./gradle.properties
+-rw-------. 1 u0_a603 u0_a603 0 Mar 12 14:31 ./.gradle/9.4.0/gc.properties
+-rw-------. 1 u0_a603 u0_a603 51 Mar 12 14:31 ./.gradle/buildOutputCleanup/cache.properties
+-rw-------. 1 u0_a603 u0_a603 0 Mar 12 14:31 ./.gradle/vcs-1/gc.properties
+-rw-------. 1 u0_a603 u0_a603 252 Mar 12 14:31 ./gradle/wrapper/gradle-wrapper.properties
+-rw-------. 1 u0_a603 u0_a603 230 Mar 12 15:15 ./LeitorUniversalIA/app/build/intermediates/incremental/debug/mergeDebugResources/compile-file-map.properties
+-rw-------. 1 u0_a603 u0_a603 226 Mar 12 15:15 ./LeitorUniversalIA/app/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+-rw-------. 1 u0_a603 u0_a603 56 Mar 12 15:16 ./LeitorUniversalIA/app/build/intermediates/app_metadata/debug/app-metadata.properties
+-rw-------. 1 u0_a603 u0_a603 54 Mar 12 15:15 ./LeitorUniversalIA/settings.gradle
+-rw-------. 1 u0_a603 u0_a603 82 Mar 12 15:15 ./LeitorUniversalIA/gradle.properties
+-rw-------. 1 u0_a603 u0_a603 0 Mar 12 15:15 ./LeitorUniversalIA/.gradle/9.4.0/gc.properties
+-rw-------. 1 u0_a603 u0_a603 51 Mar 12 15:15 ./LeitorUniversalIA/.gradle/buildOutputCleanup/cache.properties
+-rw-------. 1 u0_a603 u0_a603 0 Mar 12 15:15 ./LeitorUniversalIA/.gradle/vcs-1/gc.properties
+-rw-------. 1 u0_a603 u0_a603 252 Mar 12 15:15 ./LeitorUniversalIA/gradle/wrapper/gradle-wrapper.properties
+
+>> Arquivos com permissão de execução:
+-rwxr-xr-x. 1 u0_a603 u0_a603 8.5K Mar 12 14:31 ./gradlew
+-rwx------. 1 u0_a603 u0_a603 1.3K Mar 12 15:01 ./corrigir_manifest_leitor.sh
+-rwx------. 1 u0_a603 u0_a603 5.3K Mar 12 15:14 ./instalar_leitor_universal_completo.sh
+-rwxr-xr-x. 1 u0_a603 u0_a603 8.5K Mar 12 15:15 ./LeitorUniversalIA/gradlew
+-rwx------. 1 u0_a603 u0_a603 927 Mar 12 15:20 ./.git/hooks/commit-msg.sample
+-rwx------. 1 u0_a603 u0_a603 4.7K Mar 12 15:20 ./.git/hooks/fsmonitor-watchman.sample
+-rwx------. 1 u0_a603 u0_a603 220 Mar 12 15:20 ./.git/hooks/post-update.sample
+-rwx------. 1 u0_a603 u0_a603 455 Mar 12 15:20 ./.git/hooks/pre-applypatch.sample
+-rwx------. 1 u0_a603 u0_a603 1.7K Mar 12 15:20 ./.git/hooks/pre-commit.sample
+-rwx------. 1 u0_a603 u0_a603 447 Mar 12 15:20 ./.git/hooks/pre-merge-commit.sample
+-rwx------. 1 u0_a603 u0_a603 1.4K Mar 12 15:20 ./.git/hooks/pre-push.sample
+-rwx------. 1 u0_a603 u0_a603 4.9K Mar 12 15:20 ./.git/hooks/pre-rebase.sample
+-rwx------. 1 u0_a603 u0_a603 575 Mar 12 15:20 ./.git/hooks/pre-receive.sample
+-rwx------. 1 u0_a603 u0_a603 1.6K Mar 12 15:20 ./.git/hooks/prepare-commit-msg.sample
+-rwx------. 1 u0_a603 u0_a603 2.8K Mar 12 15:20 ./.git/hooks/push-to-checkout.sample
+-rwx------. 1 u0_a603 u0_a603 2.3K Mar 12 15:20 ./.git/hooks/sendemail-validate.sample
+-rwx------. 1 u0_a603 u0_a603 3.6K Mar 12 15:20 ./.git/hooks/update.sample
+-rwx------. 1 u0_a603 u0_a603 509 Mar 12 15:20 ./.git/hooks/applypatch-msg.sample
+-rwx------. 1 u0_a603 u0_a603 942 Mar 12 17:17 ./configurar_gradle_termux.sh
+-rwx------. 1 u0_a603 u0_a603 2.0K Mar 12 17:44 ./descrever_projeto.sh
+
+>> Estatísticas gerais:
+Total de arquivos: 1555
+Total de pastas: 759
