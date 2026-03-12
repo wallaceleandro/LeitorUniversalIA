@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo "==============================================="
 echo "CONFIGURANDO PROJETO LEITORUNIVERSALIA"
 echo "==============================================="
@@ -10,17 +9,26 @@ echo "[1/6] Atualizando Gradle Wrapper para 7.6..."
 
 # 2️⃣ Atualizar build.gradle raiz
 echo "[2/6] Atualizando Android Gradle Plugin e Kotlin..."
-if grep -q "com.android.tools.build:gradle" build.gradle; then
-  sed -i "s/com.android.tools.build:gradle:.*/com.android.tools.build:gradle:7.4.2/" build.gradle
-else
-  echo "classpath 'com.android.tools.build:gradle:7.4.2'" >> build.gradle
-fi
+cat > build.gradle << 'EOF'
+buildscript {
+    ext.kotlin_version = '1.9.10'
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.4.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
 
-if grep -q "kotlin-gradle-plugin" build.gradle; then
-  sed -i "s/org.jetbrains.kotlin:kotlin-gradle-plugin:.*/org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.10/" build.gradle
-else
-  echo "classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.10'" >> build.gradle
-fi
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+EOF
 
 # 3️⃣ Criar workflow GitHub Actions
 echo "[3/6] Criando workflow GitHub Actions..."
@@ -48,7 +56,7 @@ jobs:
           java-version: 17
 
       - name: Cache Gradle
-        uses: actions/cache@v4
+        uses: actions/cache@v3
         with:
           path: |
             ~/.gradle/caches
