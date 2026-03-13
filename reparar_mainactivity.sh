@@ -1,3 +1,13 @@
+#!/bin/bash
+set -e
+
+echo "======================================"
+echo "RECRIANDO MAINACTIVITY LIMPA"
+echo "======================================"
+
+FILE=app/src/main/java/com/leitoruniversalia/MainActivity.kt
+
+cat > $FILE << 'EOF'
 package com.leitoruniversalia
 
 import android.app.Activity
@@ -136,3 +146,16 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     }
 
 }
+EOF
+
+echo "MainActivity recriada."
+
+echo "Limpando projeto..."
+./gradlew clean
+
+echo "Compilando..."
+./gradlew assembleDebug --no-daemon
+
+echo "======================================"
+echo "APP REPARADO"
+echo "======================================"
