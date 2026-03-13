@@ -1,3 +1,99 @@
+#!/bin/bash
+set -e
+
+echo "======================================"
+echo "CORREÇÃO COMPLETA DO LEITOR UNIVERSAL"
+echo "======================================"
+
+mkdir -p app/src/main/java/com/leitoruniversalia
+mkdir -p app/src/main/res/layout
+
+BUILD=app/build.gradle
+
+echo "Adicionando bibliotecas compatíveis..."
+
+if ! grep -q "pdfbox-android" "$BUILD"; then
+sed -i '/dependencies {/a\
+    implementation "com.tom-roush:pdfbox-android:2.0.27.0"\
+    implementation "org.apache.poi:poi-ooxml:5.2.3"
+' $BUILD
+fi
+
+########################################
+# LAYOUT
+########################################
+
+cat > app/src/main/res/layout/activity_main.xml << 'EOF'
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<LinearLayout
+android:orientation="vertical"
+android:padding="20dp"
+android:layout_width="match_parent"
+android:layout_height="wrap_content">
+
+<EditText
+android:id="@+id/editText"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:hint="Digite ou abra arquivo"
+android:minHeight="200dp"/>
+
+<Button
+android:id="@+id/buttonOpen"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Abrir arquivo"/>
+
+<Button
+android:id="@+id/buttonRead"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Ler"/>
+
+<Button
+android:id="@+id/buttonPause"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Pausar"/>
+
+<Button
+android:id="@+id/buttonResume"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Continuar"/>
+
+<Button
+android:id="@+id/buttonStop"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Parar"/>
+
+<Button
+android:id="@+id/buttonClear"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Limpar texto"/>
+
+<Spinner
+android:id="@+id/speedControl"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"/>
+
+</LinearLayout>
+</ScrollView>
+EOF
+
+########################################
+# MAIN ACTIVITY
+########################################
+
+cat > app/src/main/java/com/leitoruniversalia/MainActivity.kt << 'EOF'
 package com.leitoruniversalia
 
 import android.app.Activity
@@ -172,3 +268,18 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     }
 
 }
+EOF
+
+########################################
+# BUILD
+########################################
+
+echo "Limpando projeto..."
+./gradlew clean
+
+echo "Gerando APK..."
+./gradlew assembleDebug --no-daemon
+
+echo "======================================"
+echo "CORREÇÃO FINALIZADA"
+echo "======================================"

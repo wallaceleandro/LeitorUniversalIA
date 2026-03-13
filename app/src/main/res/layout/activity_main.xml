@@ -15,7 +15,7 @@ android:layout_height="wrap_content">
 android:id="@+id/editText"
 android:layout_width="match_parent"
 android:layout_height="wrap_content"
-android:hint="Digite texto ou abra arquivo"
+android:hint="Digite ou abra arquivo"
 android:minHeight="200dp"/>
 
 <Button
@@ -53,12 +53,6 @@ android:id="@+id/buttonClear"
 android:layout_width="match_parent"
 android:layout_height="wrap_content"
 android:text="Limpar texto"/>
-
-<Button
-android:id="@+id/buttonClearHistory"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:text="Limpar histórico"/>
 
 <Spinner
 android:id="@+id/speedControl"
