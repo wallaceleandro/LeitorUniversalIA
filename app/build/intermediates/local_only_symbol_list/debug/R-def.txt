@@ -1,8 +1,11 @@
 R_DEF: Internal format may change without notice
 local
+id buttonClear
+id buttonClearHistory
 id buttonOpen
 id buttonPause
 id buttonRead
+id buttonResume
 id buttonStop
 id editText
 id speedControl
