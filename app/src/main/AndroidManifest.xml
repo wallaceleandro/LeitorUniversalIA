@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
+<activity android:name=".LibraryActivity"/>
         android:label="LeitorUniversalIA"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
 

@@ -10,6 +10,10 @@ import java.io.*
 import java.util.*
 
 class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
+    lateinit var prefs: android.content.SharedPreferences
+
+lateinit var prefs:android.content.SharedPreferences
+
 
     private lateinit var tts:TextToSpeech
     private lateinit var editText:EditText
@@ -22,9 +26,20 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     override fun onCreate(savedInstanceState:Bundle?){
 
         super.onCreate(savedInstanceState)
+        prefs = getSharedPreferences("leitor_posicao", MODE_PRIVATE)
+
+prefs=getSharedPreferences("books",MODE_PRIVATE)
+
         setContentView(R.layout.activity_main)
 
         editText=findViewById(R.id.editText)
+        val textoSalvo = prefs.getString("texto_salvo", "")
+        val posicao = prefs.getInt("posicao", 0)
+        if(textoSalvo!!.isNotEmpty()){
+            editText.setText(textoSalvo)
+            editText.setSelection(posicao.coerceAtMost(textoSalvo.length))
+        }
+
 
         val open=findViewById<Button>(R.id.buttonOpen)
         val read=findViewById<Button>(R.id.buttonRead)
@@ -32,6 +47,11 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         val stop=findViewById<Button>(R.id.buttonStop)
         val clear=findViewById<Button>(R.id.buttonClear)
         val spinner=findViewById<Spinner>(R.id.speedControl)
+val library=findViewById<Button>(R.id.buttonLibrary)
+library.setOnClickListener{
+startActivity(Intent(this,LibraryActivity::class.java))
+}
+
 
         tts=TextToSpeech(this,this)
 
@@ -51,7 +71,8 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         open.setOnClickListener{
 
             val intent=Intent(Intent.ACTION_GET_CONTENT)
-            intent.type="text/*"
+            intent.type="*/*"
+intent.addCategory(Intent.CATEGORY_OPENABLE)
             startActivityForResult(intent,PICK_FILE)
 
         }
@@ -84,6 +105,10 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             }else{
 
                 tts.stop()
+            val pos = editText.selectionStart
+            prefs.edit().putInt("posicao", pos).apply()
+            prefs.edit().putString("texto_salvo", editText.text.toString()).apply()
+
                 paused=true
 
             }
@@ -93,6 +118,10 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         stop.setOnClickListener{
 
             tts.stop()
+            val pos = editText.selectionStart
+            prefs.edit().putInt("posicao", pos).apply()
+            prefs.edit().putString("texto_salvo", editText.text.toString()).apply()
+
             paused=false
 
         }
@@ -100,6 +129,8 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         clear.setOnClickListener{
 
             editText.setText("")
+prefs.edit().putString(uri.toString(),uri.toString()).apply()
+
 
         }
 
@@ -119,6 +150,8 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                 val reader=BufferedReader(InputStreamReader(input))
 
                 editText.setText(reader.readText())
+prefs.edit().putString(uri.toString(),uri.toString()).apply()
+
 
             }catch(e:Exception){
 
