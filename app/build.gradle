@@ -9,11 +9,11 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8 
         coreLibraryDesugaringEnabled true 
     }
-    namespace 'com.leitor.universal'
+    namespace "com.leitoruniversalia"
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.leitor.universal"
+        applicationId "com.leitoruniversalia"
         minSdk 21
         targetSdk 34
         versionCode 2
