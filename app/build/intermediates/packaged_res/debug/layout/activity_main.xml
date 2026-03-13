@@ -1,23 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp">
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:padding="20dp">
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Digite o texto"
-        android:textSize="18sp"
-        android:padding="12dp"/>
+<EditText
+android:id="@+id/editText"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:hint="Digite ou abra um arquivo"/>
 
-    <Button
-        android:id="@+id/buttonRead"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ler em voz alta"
-        android:layout_marginTop="20dp"/>
+<Button
+android:id="@+id/buttonOpen"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Abrir arquivo"/>
+
+<Button
+android:id="@+id/buttonRead"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Ler texto"/>
+
+<Button
+android:id="@+id/buttonPause"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Pausar"/>
+
+<Button
+android:id="@+id/buttonStop"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Parar"/>
+
+<SeekBar
+android:id="@+id/speedControl"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"/>
+
 </LinearLayout>

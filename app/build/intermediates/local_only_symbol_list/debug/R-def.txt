@@ -1,6 +1,10 @@
 R_DEF: Internal format may change without notice
 local
+id buttonOpen
+id buttonPause
 id buttonRead
+id buttonStop
 id editText
+id speedControl
 layout activity_main
 string app_name
