@@ -1,0 +1,208 @@
+#!/bin/bash
+set -e
+
+echo "======================================"
+echo "REPARO DEFINITIVO DO LEITOR UNIVERSAL"
+echo "======================================"
+
+mkdir -p app/src/main/java/com/leitoruniversalia
+mkdir -p app/src/main/res/layout
+
+BUILD=app/build.gradle
+
+########################################
+# REMOVER BIBLIOTECAS PROBLEMÁTICAS
+########################################
+
+sed -i '/poi-ooxml/d' $BUILD
+sed -i '/tika/d' $BUILD
+sed -i '/epublib/d' $BUILD
+
+########################################
+# GARANTIR PDFBOX
+########################################
+
+if ! grep -q "pdfbox-android" "$BUILD"; then
+sed -i '/dependencies {/a\
+    implementation "com.tom-roush:pdfbox-android:2.0.27.0"
+' $BUILD
+fi
+
+########################################
+# MAIN ACTIVITY CORRIGIDA
+########################################
+
+cat > app/src/main/java/com/leitoruniversalia/MainActivity.kt << 'EOF'
+package com.leitoruniversalia
+
+import android.app.Activity
+import android.content.Intent
+import android.net.Uri
+import android.os.Bundle
+import android.speech.tts.TextToSpeech
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.*
+import java.io.*
+import java.util.*
+
+import com.tom_roush.pdfbox.pdmodel.PDDocument
+import com.tom_roush.pdfbox.text.PDFTextStripper
+
+class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
+
+    private lateinit var tts: TextToSpeech
+    private lateinit var editText: EditText
+
+    private var pausedText:String=""
+    private val PICK_FILE=100
+
+    override fun onCreate(savedInstanceState:Bundle?) {
+
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        editText=findViewById(R.id.editText)
+
+        val open=findViewById<Button>(R.id.buttonOpen)
+        val read=findViewById<Button>(R.id.buttonRead)
+        val pause=findViewById<Button>(R.id.buttonPause)
+        val resume=findViewById<Button>(R.id.buttonResume)
+        val stop=findViewById<Button>(R.id.buttonStop)
+        val clear=findViewById<Button>(R.id.buttonClear)
+        val spinner=findViewById<Spinner>(R.id.speedControl)
+
+        tts=TextToSpeech(this,this)
+
+        val speeds=arrayOf("0.5","0.75","1.0","1.25","1.5","2.0")
+        spinner.adapter=ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,speeds)
+
+        spinner.onItemSelectedListener=object:AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(parent:AdapterView<*>?,view:android.view.View?,pos:Int,id:Long){
+                tts.setSpeechRate(speeds[pos].toFloat())
+            }
+            override fun onNothingSelected(parent:AdapterView<*>?) {}
+        }
+
+        open.setOnClickListener{
+
+            val intent=Intent(Intent.ACTION_GET_CONTENT)
+            intent.type="*/*"
+            startActivityForResult(intent,PICK_FILE)
+
+        }
+
+        read.setOnClickListener{
+
+            val text=editText.text.toString()
+            pausedText=text
+            tts.speak(text,TextToSpeech.QUEUE_FLUSH,null,null)
+
+        }
+
+        pause.setOnClickListener{
+
+            pausedText=editText.text.toString()
+            tts.stop()
+
+        }
+
+        resume.setOnClickListener{
+
+            tts.speak(pausedText,TextToSpeech.QUEUE_FLUSH,null,null)
+
+        }
+
+        stop.setOnClickListener{
+
+            tts.stop()
+
+        }
+
+        clear.setOnClickListener{
+
+            editText.setText("")
+
+        }
+
+    }
+
+    override fun onActivityResult(requestCode:Int,resultCode:Int,data:Intent?){
+
+        super.onActivityResult(requestCode,resultCode,data)
+
+        if(requestCode==PICK_FILE && resultCode==Activity.RESULT_OK){
+
+            try{
+
+                val uri=data!!.data!!
+                val input=contentResolver.openInputStream(uri)
+
+                val name=uri.toString().lowercase()
+
+                var text=""
+
+                if(name.endsWith(".pdf")){
+
+                    val doc=PDDocument.load(input)
+                    val stripper=PDFTextStripper()
+                    text=stripper.getText(doc)
+                    doc.close()
+
+                }else{
+
+                    val reader=BufferedReader(InputStreamReader(input))
+                    text=reader.readText()
+
+                }
+
+                editText.setText(text)
+
+            }catch(e:Exception){
+
+                Toast.makeText(this,"Formato não suportado",Toast.LENGTH_LONG).show()
+
+            }
+
+        }
+
+    }
+
+    override fun onInit(status:Int){
+
+        if(status==TextToSpeech.SUCCESS){
+
+            tts.language=Locale("pt","BR")
+
+        }
+
+    }
+
+    override fun onDestroy(){
+
+        if(::tts.isInitialized){
+
+            tts.stop()
+            tts.shutdown()
+
+        }
+
+        super.onDestroy()
+
+    }
+
+}
+EOF
+
+########################################
+# BUILD
+########################################
+
+echo "Limpando projeto..."
+./gradlew clean
+
+echo "Gerando APK..."
+./gradlew assembleDebug --no-daemon
+
+echo "======================================"
+echo "REPARO FINALIZADO"
+echo "======================================"

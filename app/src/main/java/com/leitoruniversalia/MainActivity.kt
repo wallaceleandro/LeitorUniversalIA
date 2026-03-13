@@ -13,14 +13,12 @@ import java.util.*
 import com.tom_roush.pdfbox.pdmodel.PDDocument
 import com.tom_roush.pdfbox.text.PDFTextStripper
 
-import org.apache.poi.xwpf.usermodel.XWPFDocument
-
 class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     private lateinit var tts: TextToSpeech
     private lateinit var editText: EditText
-    private var pausedText:String=""
 
+    private var pausedText:String=""
     private val PICK_FILE=100
 
     override fun onCreate(savedInstanceState:Bundle?) {
@@ -115,20 +113,6 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                     text=stripper.getText(doc)
                     doc.close()
 
-                }else if(name.endsWith(".docx")){
-
-                    val doc=XWPFDocument(input)
-                    val paragraphs=doc.paragraphs
-                    val builder=StringBuilder()
-
-                    for(p in paragraphs){
-
-                        builder.append(p.text).append("\n")
-
-                    }
-
-                    text=builder.toString()
-
                 }else{
 
                     val reader=BufferedReader(InputStreamReader(input))
@@ -140,7 +124,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
             }catch(e:Exception){
 
-                Toast.makeText(this,"Erro ao abrir arquivo",Toast.LENGTH_LONG).show()
+                Toast.makeText(this,"Formato não suportado",Toast.LENGTH_LONG).show()
 
             }
 
