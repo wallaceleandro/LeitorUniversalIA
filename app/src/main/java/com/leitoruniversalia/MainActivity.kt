@@ -1,36 +1,45 @@
-package com.leitor.universal
+package com.leitoruniversalia
 
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
+import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
+import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
+
+    private lateinit var tts: TextToSpeech
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val texto = findViewById<EditText>(R.id.editText)
-        val botao = findViewById<Button>(R.id.btnLer)
+        tts = TextToSpeech(this, this)
 
-        botao.setOnClickListener {
+        val editText = findViewById<EditText>(R.id.editText)
+        val button = findViewById<Button>(R.id.buttonRead)
 
-            val conteudo = texto.text.toString()
+        button.setOnClickListener {
+            val text = editText.text.toString()
 
-            if (conteudo.isEmpty()) {
-
-                Toast.makeText(this,"Digite um texto",Toast.LENGTH_SHORT).show()
-
-            } else {
-
-                Toast.makeText(this,conteudo,Toast.LENGTH_LONG).show()
-
+            if (text.isNotEmpty()) {
+                tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, null)
             }
-
         }
-
     }
 
+    override fun onInit(status: Int) {
+        if (status == TextToSpeech.SUCCESS) {
+            tts.language = Locale("pt", "BR")
+        }
+    }
+
+    override fun onDestroy() {
+        if (::tts.isInitialized) {
+            tts.stop()
+            tts.shutdown()
+        }
+        super.onDestroy()
+    }
 }
