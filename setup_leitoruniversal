@@ -1,127 +1,31 @@
 #!/bin/bash
 echo "==============================================="
-echo "CONFIGURANDO E CORRIGINDO PROJETO LeitorUniversalIA"
+echo "CORRIGINDO Gradle para AGP 8.2.2 + Kotlin 1.9.10"
 echo "==============================================="
 
-# 1️⃣ Atualizar Gradle Wrapper para 8.2.2
-echo "[1/8] Atualizando Gradle Wrapper para 8.2.2..."
-./gradlew wrapper --gradle-version 8.2.2 --distribution-type bin || true
+# 1️⃣ Atualiza Gradle Wrapper para 8.2
+echo "[1/5] Atualizando Gradle Wrapper para 8.2..."
+./gradlew wrapper --gradle-version 8.2 --distribution-type all || true
 
-# 2️⃣ Atualizar build.gradle raiz para AGP 8.2.2 + Kotlin 1.9.10
-echo "[2/8] Atualizando build.gradle..."
-cat > build.gradle << 'EOF'
-buildscript {
-    ext.kotlin_version = '1.9.10'
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:8.2.2'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
+# 2️⃣ Força o distributionUrl no gradle-wrapper.properties
+echo "[2/5] Corrigindo gradle-wrapper.properties..."
+sed -i 's|distributionUrl=.*|distributionUrl=https\://services.gradle.org/distributions/gradle-8.2-all.zip|' gradle/wrapper/gradle-wrapper.properties
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
-EOF
-
-# 3️⃣ Atualizar gradle.properties para compatibilidade
-echo "[3/8] Atualizando gradle.properties..."
-cat >> gradle.properties << 'EOF'
-android.suppressUnsupportedCompileSdk=34
-org.gradle.jvmargs=-Xmx2g -Dfile.encoding=UTF-8
-kotlin.code.style=official
-EOF
-
-# 4️⃣ Limpar cache e builds antigos
-echo "[4/8] Limpando cache do Gradle e builds antigos..."
+# 3️⃣ Limpa caches antigos
+echo "[3/5] Limpando caches antigos..."
 rm -rf ~/.gradle/caches/
 ./gradlew clean || true
 
-# 5️⃣ Atualizar workflow GitHub Actions
-echo "[5/8] Criando workflow GitHub Actions..."
-mkdir -p .github/workflows
-cat > .github/workflows/android-build.yml << 'EOF'
-name: Build Android APKs
+# 4️⃣ Build de teste local
+echo "[4/5] Tentando build debug local..."
+./gradlew assembleDebug --no-daemon
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Set up JDK 17
-        uses: actions/setup-java@v3
-        with:
-          distribution: temurin
-          java-version: 17
-
-      - name: Cache Gradle
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-
-
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
-
-      - name: Build Debug APK
-        run: ./gradlew assembleDebug --no-daemon
-
-      - name: Build Release APK
-        run: ./gradlew assembleRelease --no-daemon || true
-
-      - name: Upload Debug APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: LeitorUniversalIA-debug
-          path: app/build/outputs/apk/debug/app-debug.apk
-
-      - name: Upload Release APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: LeitorUniversalIA-release
-          path: app/build/outputs/apk/release/app-release.apk
-EOF
-
-# 6️⃣ Forçar coreLibraryDesugaring (Java 8+ compatível)
-echo "[6/8] Forçando coreLibraryDesugaring..."
-sed -i '/android {/a \
-    compileOptions { \
-        sourceCompatibility JavaVersion.VERSION_1_8 \
-        targetCompatibility JavaVersion.VERSION_1_8 \
-        coreLibraryDesugaringEnabled true \
-    }' app/build.gradle
-
-sed -i '/dependencies {/a \
-    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.3"' app/build.gradle
-
-# 7️⃣ Commitar alterações
-echo "[7/8] Commitando alterações..."
-git add .
-git commit -m "Correção total: AGP 8.2.2, Kotlin 1.9.10, desugaring, workflow Actions"
-
-# 8️⃣ Push para GitHub
-echo "[8/8] Enviando alterações para GitHub..."
+# 5️⃣ Commit e push para GitHub
+echo "[5/5] Commitando alterações do wrapper e push..."
+git add gradle/wrapper/gradle-wrapper.properties gradlew gradlew.bat
+git commit -m "Atualiza Gradle Wrapper para 8.2 compatível AGP 8.2.2"
 git push origin main
 
 echo "==============================================="
-echo "PROJETO CORRIGIDO E CONFIGURADO!"
-echo "GitHub Actions irá gerar APKs debug/release automaticamente."
+echo "Gradle Wrapper atualizado para 8.2. Agora o GitHub Actions deve usar a versão correta."
 echo "==============================================="

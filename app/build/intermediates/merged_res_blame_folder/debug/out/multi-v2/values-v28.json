@@ -4,7 +4,7 @@
             "outputFile": "com.leitor.universal.app-mergeDebugResources-29:/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "/data/data/com.termux/files/home/.gradle/caches/9.4.0/transforms/e1104eb18cc202dd80fc002661d97515/transformed/appcompat-1.6.1/res/values-v28/values-v28.xml",
+                    "source": "/data/data/com.termux/files/home/.gradle/caches/transforms-3/6fa02a0dfff4cf3a32fe3f5f42ebab9d/transformed/appcompat-1.6.1/res/values-v28/values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/data/data/com.termux/files/home/.gradle/caches/9.4.0/transforms/55f1689675d631fc89b77865a52b745c/transformed/material-1.11.0/res/values-v28/values-v28.xml",
+                    "source": "/data/data/com.termux/files/home/.gradle/caches/transforms-3/2927958d32a36008acbe1df84046da14/transformed/material-1.11.0/res/values-v28/values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",

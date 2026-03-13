@@ -4,7 +4,17 @@
             "outputFile": "com.leitor.universal.app-mergeDebugResources-29:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/data/data/com.termux/files/home/.gradle/caches/9.4.0/transforms/e1104eb18cc202dd80fc002661d97515/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
+                    "source": "/data/data/com.termux/files/home/.gradle/caches/transforms-3/84ef05bb0dbacaf15893ca1153d48845/transformed/core-1.12.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "/data/data/com.termux/files/home/.gradle/caches/transforms-3/6fa02a0dfff4cf3a32fe3f5f42ebab9d/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "/data/data/com.termux/files/home/.gradle/caches/9.4.0/transforms/af64486e65ee45aab75e861207821900/transformed/core-1.12.0/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]

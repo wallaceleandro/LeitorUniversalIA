@@ -4,7 +4,7 @@
             "outputFile": "com.leitor.universal.app-mergeDebugResources-29:/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "/data/data/com.termux/files/home/.gradle/caches/9.4.0/transforms/e1104eb18cc202dd80fc002661d97515/transformed/appcompat-1.6.1/res/values-v22/values-v22.xml",
+                    "source": "/data/data/com.termux/files/home/.gradle/caches/transforms-3/6fa02a0dfff4cf3a32fe3f5f42ebab9d/transformed/appcompat-1.6.1/res/values-v22/values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

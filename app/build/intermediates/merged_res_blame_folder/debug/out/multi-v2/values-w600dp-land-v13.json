@@ -4,7 +4,7 @@
             "outputFile": "com.leitor.universal.app-mergeDebugResources-29:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
             "map": [
                 {
-                    "source": "/data/data/com.termux/files/home/.gradle/caches/9.4.0/transforms/55f1689675d631fc89b77865a52b745c/transformed/material-1.11.0/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+                    "source": "/data/data/com.termux/files/home/.gradle/caches/transforms-3/2927958d32a36008acbe1df84046da14/transformed/material-1.11.0/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
