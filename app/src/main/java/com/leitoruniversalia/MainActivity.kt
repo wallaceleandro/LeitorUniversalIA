@@ -10,9 +10,10 @@ import java.io.*
 import java.util.*
 
 class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
-    lateinit var prefs: android.content.SharedPreferences
+    private var leituraPosicao:Int=0
+    private var textoAtual:String=""
 
-lateinit var prefs:android.content.SharedPreferences
+
 
 
     private lateinit var tts:TextToSpeech
@@ -26,18 +27,14 @@ lateinit var prefs:android.content.SharedPreferences
     override fun onCreate(savedInstanceState:Bundle?){
 
         super.onCreate(savedInstanceState)
-        prefs = getSharedPreferences("leitor_posicao", MODE_PRIVATE)
 
 prefs=getSharedPreferences("books",MODE_PRIVATE)
 
         setContentView(R.layout.activity_main)
 
         editText=findViewById(R.id.editText)
-        val textoSalvo = prefs.getString("texto_salvo", "")
-        val posicao = prefs.getInt("posicao", 0)
         if(textoSalvo!!.isNotEmpty()){
             editText.setText(textoSalvo)
-            editText.setSelection(posicao.coerceAtMost(textoSalvo.length))
         }
 
 
@@ -78,11 +75,12 @@ intent.addCategory(Intent.CATEGORY_OPENABLE)
         }
 
         read.setOnClickListener{
+            textoAtual = editText.text.toString()
+            leituraPosicao = editText.selectionStart
+            val texto = textoAtual.substring(leituraPosicao)
+            tts.speak(texto,TextToSpeech.QUEUE_FLUSH,null,null)
+        }
 
-            val start=editText.selectionStart
-            val end=editText.selectionEnd
-
-            val text=if(start!=end){
                 editText.text.substring(start,end)
             }else{
                 editText.text.toString()
@@ -96,18 +94,15 @@ intent.addCategory(Intent.CATEGORY_OPENABLE)
         }
 
         pause.setOnClickListener{
+            leituraPosicao = editText.selectionStart
+            tts.stop()
+        }
 
-            if(paused){
-
-                tts.speak(lastText,TextToSpeech.QUEUE_FLUSH,null,null)
-                paused=false
 
             }else{
 
                 tts.stop()
             val pos = editText.selectionStart
-            prefs.edit().putInt("posicao", pos).apply()
-            prefs.edit().putString("texto_salvo", editText.text.toString()).apply()
 
                 paused=true
 
@@ -119,8 +114,6 @@ intent.addCategory(Intent.CATEGORY_OPENABLE)
 
             tts.stop()
             val pos = editText.selectionStart
-            prefs.edit().putInt("posicao", pos).apply()
-            prefs.edit().putString("texto_salvo", editText.text.toString()).apply()
 
             paused=false
 
