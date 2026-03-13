@@ -1,0 +1,18 @@
+# Gradle
+.gradle/
+build/
+
+# Android build
+app/build/
+local.properties
+
+# Logs
+*.log
+
+# IDE
+.idea/
+*.iml
+
+# APK / Bundle
+*.apk
+*.aab

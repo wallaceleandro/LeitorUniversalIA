@@ -1,3 +1,83 @@
+#!/bin/bash
+set -e
+
+echo "======================================"
+echo " ATUALIZAÇÃO ETAPAS 2 → 7"
+echo " Biblioteca + Histórico + Seleção"
+echo "======================================"
+
+mkdir -p app/src/main/java/com/leitoruniversalia
+mkdir -p app/src/main/res/layout
+
+############################################
+# LAYOUT
+############################################
+
+cat > app/src/main/res/layout/activity_main.xml <<'EOF'
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<LinearLayout
+android:orientation="vertical"
+android:padding="20dp"
+android:layout_width="match_parent"
+android:layout_height="wrap_content">
+
+<EditText
+android:id="@+id/editText"
+android:layout_width="match_parent"
+android:layout_height="300dp"
+android:gravity="top"
+android:hint="Digite ou abra um livro"/>
+
+<Button
+android:id="@+id/buttonOpen"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Abrir Livro"/>
+
+<Button
+android:id="@+id/buttonRead"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Ler Texto"/>
+
+<Button
+android:id="@+id/buttonPause"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Pausar / Continuar"/>
+
+<Button
+android:id="@+id/buttonStop"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Parar"/>
+
+<Button
+android:id="@+id/buttonClear"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Limpar Texto"/>
+
+<Spinner
+android:id="@+id/speedControl"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"/>
+
+</LinearLayout>
+</ScrollView>
+EOF
+
+############################################
+# MAIN ACTIVITY
+############################################
+
+cat > app/src/main/java/com/leitoruniversalia/MainActivity.kt <<'EOF'
 package com.leitoruniversalia
 
 import android.app.Activity
@@ -139,3 +219,15 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     }
 
 }
+EOF
+
+############################################
+# BUILD
+############################################
+
+./gradlew clean
+./gradlew assembleDebug --no-daemon
+
+echo "======================================"
+echo " ATUALIZAÇÃO CONCLUÍDA"
+echo "======================================"
