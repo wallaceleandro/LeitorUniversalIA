@@ -1,3 +1,15 @@
+#!/bin/bash
+set -e
+
+echo "======================================"
+echo "REPARANDO ANDROID MANIFEST"
+echo "======================================"
+
+MANIFEST=app/src/main/AndroidManifest.xml
+
+echo "Recriando AndroidManifest.xml correto..."
+
+cat > $MANIFEST << 'EOF'
 <?xml version="1.0" encoding="utf-8"?>
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -29,3 +41,16 @@
     </application>
 
 </manifest>
+EOF
+
+echo "Manifest corrigido."
+
+echo "Limpando projeto..."
+./gradlew clean
+
+echo "Gerando APK novamente..."
+./gradlew assembleDebug --no-daemon
+
+echo "======================================"
+echo "MANIFEST REPARADO COM SUCESSO"
+echo "======================================"
