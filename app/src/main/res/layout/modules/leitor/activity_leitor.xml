@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/tituloLeitor"
+    <Button
+        android:id="@+id/botaoAbrirArquivo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Leitor Universal IA"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:paddingBottom="16dp"/>
+        android:text="Abrir arquivo TXT"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,7 +20,7 @@
             android:id="@+id/textoConteudo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Conteúdo do texto aparecerá aqui."
+            android:text="Nenhum arquivo carregado."
             android:textSize="16sp"/>
 
     </ScrollView>
