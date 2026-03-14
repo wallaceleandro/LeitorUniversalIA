@@ -1,3 +1,13 @@
+#!/bin/bash
+set -e
+
+echo "======================================"
+echo "RECRIANDO LAYOUT DO LEITOR"
+echo "======================================"
+
+LAYOUT=app/src/main/res/layout/activity_main.xml
+
+cat > $LAYOUT << 'EOF'
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout
@@ -47,3 +57,16 @@ android:layout_height="match_parent">
     android:text="Parar"/>
 
 </LinearLayout>
+EOF
+
+echo "Layout recriado."
+
+echo "Limpando projeto..."
+./gradlew clean
+
+echo "Gerando APK..."
+./gradlew assembleDebug --no-daemon
+
+echo "======================================"
+echo "LAYOUT CORRIGIDO"
+echo "======================================"
