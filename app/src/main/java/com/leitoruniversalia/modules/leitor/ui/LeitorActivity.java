@@ -1,4 +1,4 @@
-package modules.leitor.ui;
+package com.leitoruniversalia.modules.leitor.ui;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,11 +7,10 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
+import com.leitoruniversalia.R;
+import com.leitoruniversalia.modules.leitor.txt.LeitorTXT;
 
 import java.io.File;
-
-import modules.leitor.txt.LeitorTXT;
 
 public class LeitorActivity extends Activity {
 
@@ -22,7 +21,8 @@ public class LeitorActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.modules.leitor.activity_leitor);
+
+        setContentView(R.layout.activity_leitor);
 
         Button abrirArquivo = findViewById(R.id.botaoAbrirArquivo);
         textoConteudo = findViewById(R.id.textoConteudo);
@@ -39,7 +39,7 @@ public class LeitorActivity extends Activity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         super.onActivityResult(requestCode, resultCode, data);
 
