@@ -1,4 +1,4 @@
-package com.leitoruniversalia
+package com.leitor.universal
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

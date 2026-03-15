@@ -1,23 +1,25 @@
 package com.leitor.universal
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+override fun onCreate(savedInstanceState: Bundle?) {
 
-        val editText = findViewById<EditText>(R.id.editText)
-        val button = findViewById<Button>(R.id.button)
+super.onCreate(savedInstanceState)
 
-        button.setOnClickListener {
-            val texto = editText.text.toString()
-            Toast.makeText(this, texto, Toast.LENGTH_LONG).show()
-        }
-    }
+setContentView(R.layout.activity_main)
+
+val abrir = findViewById<Button>(R.id.abrirPDF)
+
+abrir.setOnClickListener {
+
+startActivity(Intent(this, LeitorActivity::class.java))
+
+}
+
+}
 }
