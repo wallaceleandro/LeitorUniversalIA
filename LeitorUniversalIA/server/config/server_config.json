@@ -1,0 +1,12 @@
+{
+ "server_name": "LeitorUniversalIA",
+ "version": "1.0",
+ "mode": "hybrid",
+ "ai_modules": [
+  "reader",
+  "video",
+  "image",
+  "knowledge",
+  "search"
+ ]
+}
