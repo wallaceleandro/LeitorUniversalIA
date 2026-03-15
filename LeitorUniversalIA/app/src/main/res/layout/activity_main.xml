@@ -2,25 +2,21 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 android:orientation="vertical"
-android:padding="20dp"
+android:gravity="center"
+android:padding="24dp"
 android:layout_width="match_parent"
 android:layout_height="match_parent">
 
+<TextView
+android:text="Leitor Universal IA"
+android:textSize="24sp"
+android:layout_marginBottom="30dp"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"/>
+
 <Button
 android:id="@+id/abrirPDF"
-android:text="ABRIR PDF"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"/>
-
-<Button
-android:id="@+id/biblioteca"
-android:text="BIBLIOTECA"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"/>
-
-<Button
-android:id="@+id/historico"
-android:text="HISTÓRICO"
+android:text="Abrir PDF"
 android:layout_width="match_parent"
 android:layout_height="wrap_content"/>
 

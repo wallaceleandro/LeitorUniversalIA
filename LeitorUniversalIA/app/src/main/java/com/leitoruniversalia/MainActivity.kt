@@ -17,9 +17,7 @@ val abrir = findViewById<Button>(R.id.abrirPDF)
 
 abrir.setOnClickListener {
 
-val intent = Intent(this, LeitorActivity::class.java)
-
-startActivity(intent)
+startActivity(Intent(this, LeitorActivity::class.java))
 
 }
 
