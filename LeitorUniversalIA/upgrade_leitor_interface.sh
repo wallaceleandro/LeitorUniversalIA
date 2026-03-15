@@ -1,3 +1,12 @@
+#!/bin/bash
+
+echo "Atualizando interface do leitor..."
+
+APP_DIR="app/src/main"
+
+mkdir -p $APP_DIR/res/layout
+
+cat > $APP_DIR/res/layout/activity_main.xml << 'EOF'
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -80,3 +89,6 @@
     android:layout_height="wrap_content"/>
 
 </LinearLayout>
+EOF
+
+echo "Interface atualizada."
