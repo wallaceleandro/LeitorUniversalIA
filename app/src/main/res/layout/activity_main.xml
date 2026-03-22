@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/inputText"
+        android:hint="Digite ou cole o texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/pageInfo"
+        android:text="Página 1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/outputText"
+        android:text="Texto aparecerá aqui"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <Button android:id="@+id/btnPrev" android:text="Anterior"/>
+    <Button android:id="@+id/btnNext" android:text="Próximo"/>
+    <Button android:id="@+id/btnPlay" android:text="Play"/>
+    <Button android:id="@+id/btnPause" android:text="Pause"/>
+
+</LinearLayout>
