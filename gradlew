@@ -1,2 +1,11 @@
 #!/usr/bin/env sh
-exec sh gradle-7.6/bin/gradle "$@"
+
+DIR="$(cd "$(dirname "$0")" && pwd)"
+
+if [ -z "$JAVA_HOME" ]; then
+  java_cmd="java"
+else
+  java_cmd="$JAVA_HOME/bin/java"
+fi
+
+exec "$java_cmd" -jar "$DIR/gradle/wrapper/gradle-wrapper.jar" "$@"
