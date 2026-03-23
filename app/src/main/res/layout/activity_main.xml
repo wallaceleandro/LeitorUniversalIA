@@ -1,31 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="20dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/inputText"
-        android:hint="Digite ou cole o texto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
     <TextView
         android:id="@+id/pageInfo"
-        android:text="Página 1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/outputText"
-        android:text="Texto aparecerá aqui"
-        android:padding="10dp"
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="wrap_content"
+        android:text="Página 1"
+        android:textSize="18sp" />
 
-    <Button android:id="@+id/btnPrev" android:text="Anterior"/>
-    <Button android:id="@+id/btnNext" android:text="Próximo"/>
-    <Button android:id="@+id/btnPlay" android:text="Play"/>
-    <Button android:id="@+id/btnPause" android:text="Pause"/>
+    <Button
+        android:id="@+id/btnPrev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Anterior" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Próxima" />
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Play" />
+
+    <Button
+        android:id="@+id/btnPause"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pause" />
 
 </LinearLayout>
