@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:padding="20dp"
+    android:padding="10dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- TEXTO DO LIVRO -->
     <TextView
-        android:id="@+id/pageInfo"
+        android:id="@+id/textContent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Página 1"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Abra um arquivo .txt"
         android:textSize="18sp" />
 
+    <!-- CONTROLES -->
     <Button
-        android:id="@+id/btnPrev"
+        android:id="@+id/btnOpen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Anterior" />
-
-    <Button
-        android:id="@+id/btnNext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Próxima" />
+        android:text="Abrir TXT" />
 
     <Button
         android:id="@+id/btnPlay"
@@ -35,5 +32,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Pause" />
+
+    <!-- VELOCIDADE -->
+    <TextView android:text="Velocidade (0.5 - 2.0)" />
+    <SeekBar
+        android:id="@+id/seekSpeed"
+        android:max="200"
+        android:progress="100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- TOM -->
+    <TextView android:text="Tom (Pitch)" />
+    <SeekBar
+        android:id="@+id/seekPitch"
+        android:max="200"
+        android:progress="100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
