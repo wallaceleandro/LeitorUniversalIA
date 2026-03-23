@@ -1,19 +1,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.leitor.universal">
 
+    <manifest xmlns:android="http://schemas.android.c>
+    package="com.leitor.universal">
+
     <application
-        android:label="Leitor Universal IA"
-        android:theme="@android:style/Theme.Material.Light">
+    android:allowBackup="true"
+    android:label="LeitorUniversalIA"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.AppCompat.Light.N>
 
-        <activity
-    android:name=".MainActivity">
-    
-    <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>
+    <activity
+        android:name=".MainActivity"
+        android:exported="true">
 
-</activity>
+        <intent-filter>
+            <action android:name="android.intent.>
+            <category android:name="android.inten>
+        </intent-filter>
 
-    </application>
+    </activity>
+
+</application>
+</manifest>
 </manifest>
